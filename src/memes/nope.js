@@ -9,7 +9,7 @@ export let Variants = [
 		let nope = document.createElement('span');
 		nope.style.opacity = Math.random() * 0.4 + 0.6;
 		nope.style.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
-		nope.style.fontSize = (10 + Math.random() * 25) + 'px';
+		nope.style.fontSize = (10 + Math.random() * 35) + 'px';
 		nope.innerText = `${Math.random() > 0.5 ? 'N' : 'n'}${Math.random() > 0.5 ? 'O' : 'o'}${Math.random() > 0.5 ? 'P' : 'p'}${Math.random() > 0.5 ? 'E' : 'e'}`;
 		return nope;
 	}),

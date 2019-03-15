@@ -13,6 +13,7 @@ export default class RainPreset extends Preset {
 
 		raindrop.style.position = 'absolute';
 
+		raindrop.rot = Math.random() * 50 - 25;
 		raindrop.x = Math.random() * 1.2 - 0.1;
 		raindrop.y = Math.random() * 0.5 - 0.5;
 		raindrop.y_acc = 0.002 + Math.random() * 0.01;
@@ -41,7 +42,7 @@ export default class RainPreset extends Preset {
 		while(this.drops.length < 120)
 			this.createDrop();
 		for(let t of this.drops) {
-			t.style.transform = `translate(${(t.x * window.innerWidth) + 'px'}, ${(t.y * window.innerHeight) + 'px'})`;
+			t.style.transform = `translate(${(t.x * window.innerWidth) + 'px'}, ${(t.y * window.innerHeight) + 'px'}) rotate(${t.rot}deg)`;
 		}
 	}
 }
