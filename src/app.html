@@ -27,7 +27,15 @@
 	</script>
 </head>
 <body>
-	<div id="root"></div>
-	<script>window.meme_module = '<%- module %>';</script>
+	<% if(module.length) { %>
+		<div id="root"></div>
+		<script>window.meme_module = '<%= module %>';</script>
+	<% } else { %>
+		<ul>
+		<% for(let meme of memes) { %>
+			<li><a href="/<%- meme.path %>" target="_blank"><%- meme.title %></a> - <%- meme.description %></li>
+		<% } %>
+		</ul>
+	<% } %>
 </body>
 </html>

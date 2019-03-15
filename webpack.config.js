@@ -8,10 +8,25 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 
-var htmls = [];
-
 // Prepare all the memes
 const memes = require('./src/memes.js');
+
+var htmls = [
+	// index
+	new HtmlWebpackPlugin({
+		template: './src/app.html',
+		inject: true,
+		filename: 'index.html',
+		chunks: ['style'],
+
+		templateParameters: {
+			title: 'memes',
+			description: 'An open source collection of random meme pages',
+			keywords: ['funny', 'random website'],
+			memes: memes
+		}
+	})
+];
 
 memes.forEach(function(meme) {
 	try {
