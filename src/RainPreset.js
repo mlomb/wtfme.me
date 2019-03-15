@@ -5,7 +5,7 @@ export default class RainPreset extends Preset {
 		super();
 
 		this.drops = [];
-		this.make = make; // make should return a DOM element
+		this.make = make; // make() should return a DOM element
 	}
 
 	createDrop() {
@@ -23,6 +23,7 @@ export default class RainPreset extends Preset {
 
 	init(root) {
 		this.container = document.createElement('div');
+		this.container.classList.add('noselect');
 
 		root.appendChild(this.container);
 	}
@@ -37,11 +38,10 @@ export default class RainPreset extends Preset {
 				t.remove();
 			}
 		}
-		while(this.drops.length < 200)
+		while(this.drops.length < 60)
 			this.createDrop();
 		for(let t of this.drops) {
-			t.style.left = (t.x * 100).toFixed(2) + '%';
-			t.style.top = (t.y * 100).toFixed(2) + '%';
+			t.style.transform = `translate(${(t.x * window.innerWidth) + 'px'}, ${(t.y * window.innerHeight) + 'px'})`;
 		}
 	}
 }
