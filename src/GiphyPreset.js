@@ -7,9 +7,9 @@ export default class GiphyPreset extends Preset {
 	}
 
 	init(root) {
-		var img = document.createElement('img');
-		img.src = this.url;
-
+		var img = document.createElement('div');
+		img.classList.add("fullscreen-contain");
+		img.style.backgroundImage = 'url(' + this.url + ')';
 		root.appendChild(img);
 	}
 }

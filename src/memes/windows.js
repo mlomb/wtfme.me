@@ -8,7 +8,7 @@ class WindowsError extends CanvasPreset {
 
     init(root){
 		var bg = document.createElement('div');
-		bg.classList.add("fullscreen-bg");
+		bg.classList.add("fullscreen-cover");
 		bg.style.backgroundImage = 'url(http://i.imgur.com/lojmr.jpg)';
 
         super.init(bg);
