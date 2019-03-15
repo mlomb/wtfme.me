@@ -7,18 +7,19 @@ class WindowsError extends CanvasPreset {
     }
 
     init(root){
-        super.init(root);
+		var bg = document.createElement('div');
+		bg.classList.add("fullscreen-bg");
+		bg.style.backgroundImage = 'url(http://i.imgur.com/lojmr.jpg)';
+
+        super.init(bg);
+		root.prepend(bg);
+
         this.img = new Image();
         this.img.src = this.url;
-
-        var bg = document.createElement('div');
-		bg.classList.add("fullscreen-bg");
-        bg.style.backgroundImage = 'url(http://i.imgur.com/lojmr.jpg)'
-		root.prepend(bg);
     }
 
 	frame() {
-        //super.frame();
+        super.frame();
 		const ctx = this.ctx;
 		ctx.drawImage(this.img, this.mousePosition.x - this.img.width / 2, this.mousePosition.y - this.img.height / 2);
 	}
