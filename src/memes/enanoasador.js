@@ -1,4 +1,4 @@
-import {ImgurPreset, GiphyPreset} from '../ImagePreset';
+import {ImgurPreset, GiphyPreset} from '@presets/ImagePreset';
 
 export let Variants = [
 	new ImgurPreset('NwgJujc'),

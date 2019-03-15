@@ -1,4 +1,4 @@
-import CanvasPreset from '../CanvasPreset';
+import CanvasPreset from '@presets/CanvasPreset.js';
 
 class WindowsError extends CanvasPreset {
     constructor(url){

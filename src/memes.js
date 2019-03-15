@@ -1,6 +1,13 @@
 
 module.exports = [
 	{
+		title: '404',
+		description: '404 Not. Found.',
+		keywords: ['404', 'not found'],
+		path: '404',
+		module: '404.js'
+	},
+	{
 		title: 'nOpE',
 		description: 'NOPE NOPE NOPE NOPE NOPE',
 		keywords: ['nope'],

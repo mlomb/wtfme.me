@@ -46,6 +46,11 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist'),
 		publicPath: '/'
 	},
+	resolve: {
+		alias: {
+			'@presets': path.resolve(__dirname, 'src/presets')
+		}
+	},
 	module: {
 		rules: [
   			{
