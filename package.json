@@ -1,0 +1,32 @@
+{
+	"name": "wtfme.me",
+	"scripts": {
+		"build": "cross-env NODE_ENV=production webpack -p",
+		"dev": "cross-env NODE_ENV=development webpack-dev-server"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mlomb/wtfme.me.git"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/mlomb/wtfme.me/issues"
+	},
+	"homepage": "https://wtfme.me",
+	"dependencies": {
+		"clean-webpack-plugin": "^2.0.1",
+		"copy-webpack-plugin": "^5.0.1",
+		"cross-env": "^5.2.0",
+		"css-loader": "^2.1.1",
+		"html-webpack-plugin": "^3.2.0",
+		"less": "^3.9.0",
+		"less-loader": "^4.1.0",
+		"mini-css-extract-plugin": "^0.5.0",
+		"webpack": "^4.29.6",
+		"webpack-cli": "^3.2.3",
+		"webpack-fix-style-only-entries": "^0.2.1"
+	},
+	"devDependencies": {
+		"webpack-dev-server": "^3.2.1"
+	}
+}
