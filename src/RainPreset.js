@@ -38,7 +38,7 @@ export default class RainPreset extends Preset {
 				t.remove();
 			}
 		}
-		while(this.drops.length < 60)
+		while(this.drops.length < 120)
 			this.createDrop();
 		for(let t of this.drops) {
 			t.style.transform = `translate(${(t.x * window.innerWidth) + 'px'}, ${(t.y * window.innerHeight) + 'px'})`;
