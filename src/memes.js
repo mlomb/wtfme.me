@@ -13,5 +13,12 @@ module.exports = [
 		keywords: ['window errors', 'windows xp', 'windows 7'],
 		path: 'windows',
 		module: 'windows.js'
+	},
+	{
+		title: 'Enano asador',
+		description: 'Enano asador bostero',
+		keywords: ['asado', 'boca', 'enano'],
+		path: 'enanoasador',
+		module: 'enanoasador.js'
 	}
 ];
