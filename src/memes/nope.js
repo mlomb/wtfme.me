@@ -1,4 +1,4 @@
-import GiphyPreset from '../GiphyPreset';
+import {GiphyPreset} from '../ImagePreset';
 import RainPreset from '../RainPreset';
 
 export let Variants = [
