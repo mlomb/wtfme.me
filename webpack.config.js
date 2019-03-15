@@ -11,33 +11,23 @@ const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 var htmls = [];
 
 // Prepare all the memes
-const memes = path.resolve(__dirname, 'src/memes');
-fs.readdirSync(memes).forEach(function(file) {
+const memes = require('./src/memes.js');
+
+memes.forEach(function(meme) {
 	try {
-		const meme_module_path = path.resolve(memes, file);
-		const meme_module = require(meme_module_path);
-		const code = file.slice(0, -3);
-		const config = Object.assign({
-			// defaults
-			title: code
-		}, meme_module);
-		
 		htmls.push(new HtmlWebpackPlugin({
 			template: './src/app.html',
 			inject: true,
-			filename: code + '.html',
+			filename: meme.path + '.html',
 			chunks: ['app', 'style'],
-			
-			templateParameters	: {
-				meme_module: `./${file}`,
-				title: config.title
-			}
+
+			templateParameters: meme
 		}));
-		
-		console.log(`Meme ${config.title} registred!`);
+
+		console.log(`Meme ${meme.title} registred!`);
 	} catch(e) {
 		// Rotten meme
-		console.log(`Meme ${file} is rotten`);
+		console.log(`Meme ${meme.title || "<no title>"} is rotten`);
 		console.error(e);
 	}
 });
@@ -45,7 +35,7 @@ fs.readdirSync(memes).forEach(function(file) {
 const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-	mode: 'production',
+	mode: devMode ? 'development' : 'production',
 	target: 'web',
 	entry: {
 		app: './src/app.js',
@@ -61,7 +51,18 @@ module.exports = {
   			{
   				test: /\.(c|le)ss$/,
   				use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
-  			}
+  			},
+			{
+				test: /\.(js|jsx)$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: devMode ? [] : ['@babel/preset-env'],
+						compact: !devMode
+					}
+				}
+			}
 		],
 	},
 	plugins: [

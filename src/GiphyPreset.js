@@ -1,13 +1,15 @@
+import Preset from './Preset';
 
-function GiphyPreset(id) {
-	this.url = `https://media.giphy.com/media/${id}/giphy.gif`;
+export default class GiphyPreset extends Preset {
+	constructor(id) {
+		super();
+		this.url = `https://media.giphy.com/media/${id}/giphy.gif`;
+	}
+
+	init(root) {
+		var img = document.createElement('img');
+		img.src = this.url;
+
+		root.appendChild(img);
+	}
 }
-
-GiphyPreset.prototype.render = function(root) {
-	var img = document.createElement('img');
-	img.src = this.url;
-
-	root.appendChild(img);
-}
-
-module.exports = GiphyPreset;

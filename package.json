@@ -14,6 +14,9 @@
 	},
 	"homepage": "https://wtfme.me",
 	"dependencies": {
+		"@babel/core": "^7.3.4",
+		"@babel/preset-env": "^7.3.4",
+		"babel-loader": "^8.0.5",
 		"clean-webpack-plugin": "^2.0.1",
 		"copy-webpack-plugin": "^5.0.1",
 		"cross-env": "^5.2.0",

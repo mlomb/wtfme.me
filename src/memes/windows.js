@@ -1,11 +1,15 @@
-var CanvasPreset = require('../CanvasPreset');
+import CanvasPreset from '../CanvasPreset';
 
-module.exports = {
-    title: "Windows error",
-    variants: [
-        new CanvasPreset(function(ctx){
-			ctx.fillStyle = 'red';
-			ctx.fillRect(0, 0, 150, 150);
-		})
-    ]
-};
+class WindowsError extends CanvasPreset {
+
+	frame() {
+		const ctx = this.ctx;
+
+		ctx.fillStyle = 'red';
+		ctx.fillRect(0, 0, 150, 150);
+	}
+}
+
+export let Variants = [
+    new WindowsError(/* an image, for example */)
+];
