@@ -21,7 +21,7 @@ class WindowsError extends CanvasPreset {
 
 	frame() {
 		const ctx = this.ctx;
-		ctx.drawImage(this.img, this.mousePosition.x - this.img.width / 2, this.mousePosition.y - this.img.height / 2);
+		ctx.drawImage(this.img, this.pointerPosition.x - this.img.width / 2, this.pointerPosition.y - this.img.height / 2);
 	}
 }
 
