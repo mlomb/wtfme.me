@@ -14,7 +14,7 @@ module.exports = [
 		keywords: ['no', 'nope'],
 		path: 'nope',
 		module: 'nope.js',
-		cover: 'https://i.ytimg.com/vi/8JaJzzNfygo/hqdefault.jpg'
+		cover: 'https://i.imgur.com/idiXnOt.jpg'
 	},
 	{
 		title: 'Windows error',
@@ -22,20 +22,22 @@ module.exports = [
 		keywords: ['windows errors', 'windows xp', 'windows 7'],
 		path: 'windows',
 		module: 'windows.js',
-		cover: 'https://i.ytimg.com/vi/NBFMH-2i34Q/maxresdefault.jpg'
+		cover: 'https://i.imgur.com/eiQCC9I.jpg'
 	},
 	{
 		title: 'Enano asador',
 		description: 'Enano asador bostero',
 		keywords: ['asado', 'boca', 'enano'],
 		path: 'enanoasador',
-		module: 'enanoasador.js'
+		module: 'enanoasador.js',
+		cover: 'https://i.imgur.com/12W3qui.jpg'
 	},
 	{
 		title: 'Spongebob',
 		description: 'SpongeBob SquarePants',
 		keywords: ['spongebob', 'squarepants', 'bikini bottom'],
 		path: 'spongebob',
-		module: 'spongebob.js'
-	},
+		module: 'spongebob.js',
+		cover: 'https://i.imgur.com/h3bJ8Ov.jpg'
+	}
 ];
