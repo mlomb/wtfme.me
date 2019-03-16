@@ -5,6 +5,7 @@ import YoutubePreset from '@presets/YoutubePreset';
 export let Variants = [
 	new GiphyPreset('6h4z4b3v6XWxO'), // octopus running
 	new GiphyPreset('3ohs7KViF6rA4aan5u'), // homer
+	new GiphyPreset('wofftnAdDtx4s'), // sponge bob
 	new RainPreset(function() {
 		let nope = document.createElement('span');
 		nope.style.opacity = Math.random() * 0.4 + 0.6;
