@@ -31,5 +31,13 @@ module.exports = [
 		path: 'enanoasador',
 		module: 'enanoasador.js',
 		cover: 'https://i.imgur.com/12W3qui.jpg'
+	},
+	{
+		title: 'Spongebob',
+		description: 'SpongeBob SquarePants',
+		keywords: ['spongebob', 'squarepants', 'bikini bottom'],
+		path: 'spongebob',
+		module: 'spongebob.js',
+		cover: 'https://i.imgur.com/h3bJ8Ov.jpg'
 	}
 ];
