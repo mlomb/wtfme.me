@@ -4,12 +4,13 @@ class WindowsError extends CanvasPreset {
     constructor(url){
         super();
         this.url = url;
+        this.backgrounds = ['wjbADbb', 'lojmr', 'FyCO6pw'];
     }
 
     init(root){
 		var bg = document.createElement('div');
 		bg.classList.add("fullscreen-cover");
-		bg.style.backgroundImage = 'url(http://i.imgur.com/lojmr.jpg)';
+		bg.style.backgroundImage = 'url(http://i.imgur.com/' + this.backgrounds[Math.floor(Math.random() * this.backgrounds.length)] + '.jpg)';
 
         super.init(bg);
 		root.prepend(bg);
