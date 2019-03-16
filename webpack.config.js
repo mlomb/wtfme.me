@@ -11,6 +11,8 @@ const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 // Prepare all the memes
 const memes = require('./src/memes.js');
 
+memes.sort((a, b) => (a.title || "_").localeCompare(b.title || "_"));
+
 var htmls = [
 	// index
 	new HtmlWebpackPlugin({
