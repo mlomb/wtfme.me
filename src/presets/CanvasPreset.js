@@ -4,18 +4,18 @@ export default class CanvasPreset extends Preset {
 	init(root) {
 		this.canvas = document.createElement('canvas');
 		this.ctx = this.canvas.getContext('2d');
-        this.mousePosition = {};
+        this.pointerPosition = {};
 
 		root.appendChild(this.canvas);
 
 		window.addEventListener('resize', this.resize.bind(this));
 		window.addEventListener('orientationchange', this.resize.bind(this));
-        window.addEventListener('mousemove', this.mousemove.bind(this));
+        window.addEventListener('pointermove', this.pointermove.bind(this));
 		this.resize();
 	}
 
-    mousemove(e) {
-        this.mousePosition = { x: e.pageX, y: e.pageY };
+    pointermove(e) {
+        this.pointerPosition = { x: e.pageX, y: e.pageY };
     }
 
 	resize() {

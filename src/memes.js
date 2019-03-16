@@ -14,7 +14,7 @@ module.exports = [
 		keywords: ['no', 'nope'],
 		path: 'nope',
 		module: 'nope.js',
-		cover: 'https://i.imgur.com/idiXnOt.jpg'
+		cover: 'https://i.imgur.com/9MSWoDh.png'
 	},
 	{
 		title: 'Windows error',
@@ -39,6 +39,14 @@ module.exports = [
 		path: 'spongebob',
 		module: 'spongebob.js',
 		cover: 'https://i.imgur.com/h3bJ8Ov.jpg'
+	},
+	{
+		title: 'money money money',
+		description: 'money money money',
+		keywords: ['money', 'cash', 'raining dollars'],
+		path: 'money',
+		module: 'money.js',
+		cover: 'https://i.imgur.com/YIXxdeR.png'
 	},
 	{
 		title: 'Teemo',
