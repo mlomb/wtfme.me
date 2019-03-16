@@ -6,7 +6,7 @@ export default class RainPreset extends Preset {
 
 		this.drops = [];
 		this.make = make; // make() should return a DOM element
-		this.max_drops = window.mobile_detect.mobileGrade() == 'A' ? 120 : 40;
+		this.max_drops = window.mobile_detect.mobile() ? 40 : 120;
 	}
 
 	createDrop() {
