@@ -6,6 +6,7 @@ export default class RainPreset extends Preset {
 
 		this.drops = [];
 		this.make = make; // make() should return a DOM element
+		this.max_drops = window.mobile_detect.mobileGrade() == 'A' ? 120 : 40;
 	}
 
 	createDrop() {
@@ -39,7 +40,7 @@ export default class RainPreset extends Preset {
 				t.remove();
 			}
 		}
-		while(this.drops.length < 120)
+		while(this.drops.length < this.max_drops)
 			this.createDrop();
 		for(let t of this.drops) {
 			t.style.transform = `translate(${(t.x * window.innerWidth) + 'px'}, ${(t.y * window.innerHeight) + 'px'}) rotate(${t.rot}deg)`;

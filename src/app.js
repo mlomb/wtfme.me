@@ -1,3 +1,7 @@
+const MobileDetect = require('mobile-detect');
+
+window.mobile_detect = new MobileDetect(window.navigator.userAgent);
+
 const context = require.context('./memes', true, /\.(js)$/);
 
 const module = context(`./${window.meme_module}`);
