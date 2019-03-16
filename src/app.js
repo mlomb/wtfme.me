@@ -37,9 +37,14 @@ if(module.Variants && module.Variants.length > 0) {
 
 	const requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
-	function frame() {
+	let last = 0;
+
+	function frame(now) {
+		let delta = (now - last) / 1000;
+		last = now;
+
 		for(var v of variant) {
-			v.frame();
+			v.frame(delta);
 		}
 		requestAnimationFrame(frame);
 	}
