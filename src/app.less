@@ -31,9 +31,18 @@ canvas {
 	.vendor(user-select, none);
 	//.vendor(user-drag, none);
 }
-ul.list {
-    text-align: center;
-    list-style: none;
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:flex-start;
+	a{
+		div{
+			width: 125px;
+			height: 125px;
+			background-size: cover;
+			background-position: center;
+		}
+	}
 }
 
 .fullscreen-cover{
