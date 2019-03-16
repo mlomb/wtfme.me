@@ -27,5 +27,12 @@ module.exports = [
 		keywords: ['asado', 'boca', 'enano'],
 		path: 'enanoasador',
 		module: 'enanoasador.js'
-	}
+	},
+	{
+		title: 'Spongebob',
+		description: 'SpongeBob SquarePants',
+		keywords: ['spongebob', 'squarepants', 'bikini bottom'],
+		path: 'spongebob',
+		module: 'spongebob.js'
+	},
 ];
