@@ -1,9 +1,10 @@
-import AudioPreset from '@presets/AudioPreset';
+import SoundCloudPreset from '@presets/SoundCloudPreset';
 import CanvasPreset from '@presets/CanvasPreset.js';
 import {GiphyPreset} from '@presets/ImagePreset';
 
-var audios = ['591518472', '199105914'];
+const deal = new GiphyPreset('Tte95WnDGq5Gg');
 
 export let Variants = [
-	[new AudioPreset(audios[Math.floor(Math.random() * audios.length)]), new GiphyPreset('Tte95WnDGq5Gg')]
+	[new SoundCloudPreset('591518472'), deal],
+	[new SoundCloudPreset('199105914'), deal],
 ];
