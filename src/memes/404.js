@@ -1,7 +1,10 @@
 import {ImgurPreset} from '@presets/ImagePreset';
 import TextPreset from '@presets/TextPreset';
 
-var errorText = new TextPreset(`This animal is like the page you are looking for... <br> It doesn't exist`, 85);
+var errorText = new TextPreset({
+	content: "This animal is like the page you are looking for...\nIt doesn't exist",
+	bottom: '50px'
+});
 
 export let Variants = [
 	[new ImgurPreset('tjF63dq'), errorText],
