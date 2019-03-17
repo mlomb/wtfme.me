@@ -41,6 +41,14 @@ module.exports = [
 		cover: 'https://i.imgur.com/h3bJ8Ov.jpg'
 	},
 	{
+		title: 'rain',
+		description: 'May the memes rain',
+		keywords: ['rain', 'falling words'],
+		path: 'rain',
+		module: 'rain.js',
+		cover: ''
+	},
+	{
 		title: 'money money money',
 		description: 'money money money',
 		keywords: ['money', 'cash', 'raining dollars'],
