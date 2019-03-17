@@ -73,7 +73,7 @@ export default class MovingElementsPreset extends Preset {
 		while(this.elements.length < this.options.max_elements)
 			this.create();
 		for(let t of this.elements) {
-			t.style.transform = `translate(${(t.x_pos * window.innerWidth) + 'px'}, ${(t.y_pos * window.innerHeight) + 'px'}) rotate(${t.rot}deg)`;
+			t.style.transform = `translate(calc(${(t.x_pos * window.innerWidth) + 'px'} - 50%), calc(${(t.y_pos * window.innerHeight) + 'px'} - 50%)) rotate(${t.rot}deg)`;
 		}
 	}
 }
