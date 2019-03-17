@@ -9,5 +9,5 @@ export let Variants = parts.length != 2 ? [
 		center: true
 	})
 ] : [
-	new TextRainPreset(parts[1])
+	new TextRainPreset(decodeURIComponent(parts[1]))
 ];
