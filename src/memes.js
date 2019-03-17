@@ -41,11 +41,11 @@ module.exports = [
 		cover: 'https://i.imgur.com/h3bJ8Ov.jpg'
 	},
 	{
-		title: 'money money money',
-		description: 'money money money',
-		keywords: ['money', 'cash', 'raining dollars'],
-		path: 'money',
-		module: 'money.js',
-		cover: 'https://i.imgur.com/YIXxdeR.png'
+		title: 'rain',
+		description: 'May the memes rain',
+		keywords: ['rain', 'falling words'],
+		path: 'rain',
+		module: 'rain.js',
+		cover: ''
 	}
 ];
