@@ -47,5 +47,21 @@ module.exports = [
 		path: 'rain',
 		module: 'rain.js',
 		cover: ''
+	},
+	{
+		title: 'money money money',
+		description: 'money money money',
+		keywords: ['money', 'cash', 'raining dollars'],
+		path: 'money',
+		module: 'money.js',
+		cover: 'https://i.imgur.com/YIXxdeR.png'
+	},
+	{
+		title: 'Teemo',
+		description: 'Teemo, the Swift Scout',
+		keywords: ['Teemo', 'LoL', 'troll'],
+		path: 'teemo',
+		module: 'teemo.js',
+		cover: 'https://i.imgur.com/h3bJ8Ov.jpg'
 	}
 ];
