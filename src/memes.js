@@ -62,6 +62,14 @@ module.exports = [
 		keywords: ['Teemo', 'LoL', 'troll'],
 		path: 'teemo',
 		module: 'teemo.js',
-		cover: 'https://i.imgur.com/h3bJ8Ov.jpg'
+		cover: 'https://i.imgur.com/VSgHcSh.png'
+	},
+	{
+		title: 'Sexy girl',
+		description: 'Beautiful girl moves',
+		keywords: ['rickrolled', 'girl', 'troll'],
+		path: 'sexygirl',
+		module: 'rickrolled.js',
+		cover: 'https://i.imgur.com/j274AzM.jpg'
 	}
 ];
