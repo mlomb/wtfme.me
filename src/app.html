@@ -31,11 +31,14 @@
 		<div id="root"></div>
 		<script>window.meme_module = '<%= module %>';</script>
 	<% } else { %>
-		<div class="list">
-		<% for(let meme of memes) { %>
-			<a href="/<%- meme.path %>" target="_blank" title="<%- meme.title %>"><div style="background-image: url(<%- meme.cover %>)"></div></a>
-		<% } %>
-	</div>
+		<div class="logo"><a href="https://wtfme.me"><img src="/logo.png" alt="wtfme.me logo"></a></div>
+		<div class="gallery-container">
+			<div class="list">
+			<% for(let meme of memes) { %>
+				<a href="/<%- meme.path %>" target="_blank" title="<%- meme.title %>"><div style="background-image: url(<%- meme.cover %>)"></div></a>
+			<% } %>
+			</div>
+		</div>
 	<% } %>
 </body>
 </html>
