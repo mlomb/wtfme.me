@@ -70,10 +70,10 @@ module.exports = {
 	},
 	module: {
 		rules: [
-  			{
-  				test: /\.(c|le)ss$/,
-  				use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
-  			},
+			{
+				test: /\.(c|le)ss$/,
+				use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+			},
 			{
 				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
@@ -89,9 +89,9 @@ module.exports = {
 	},
 	plugins: [
 		new CleanWebpackPlugin(),
-        new CopyWebpackPlugin([
-            { from: 'public' }
-        ]),
+		new CopyWebpackPlugin([
+			{ from: 'public' }
+		]),
 		new MiniCssExtractPlugin({
 			filename: devMode ? '[name].css' : '[name].[contenthash].css'
 		}),
