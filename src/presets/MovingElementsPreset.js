@@ -11,7 +11,7 @@ export default class MovingElementsPreset extends Preset {
 
 		this.options = Object.assign({
 			make: () => { throw new Error("Not implemented"); }, // should return a DOM element
-			direction: 'vertical',
+			axis: 'vertical',
 			max_elements: window.mobile_detect.mobile() ? 40 : 120,
 			max_rotation: 50,
 			max_speed: 0.4
@@ -30,7 +30,7 @@ export default class MovingElementsPreset extends Preset {
 		let fixed = Math.random() * 1.1 - 0.05;
 		let variable = (this.options.max_speed < 0 ? 1.7 : 0) + Math.random() * 0.5 - 0.7;
 
-		if(this.options.direction == 'vertical') {
+		if(this.options.axis == 'vertical') {
 			element.x_pos = fixed;
 			element.y_pos = variable;
 		} else {
@@ -40,8 +40,8 @@ export default class MovingElementsPreset extends Preset {
 
 		var speed = 0.2 * this.options.max_speed + this.options.max_speed * 0.8 * Math.random();
 
-		element.x_speed = this.options.direction == 'horizontal' ? speed : 0;
-		element.y_speed = this.options.direction == 'vertical' ? speed : 0;
+		element.x_speed = this.options.axis == 'horizontal' ? speed : 0;
+		element.y_speed = this.options.axis == 'vertical' ? speed : 0;
 
 		this.container.appendChild(element);
 		this.elements.push(element);
@@ -61,8 +61,8 @@ export default class MovingElementsPreset extends Preset {
 			t.x_pos += t.x_speed * delta;
 			t.y_pos += t.y_speed * delta;
 
-			let speed = this.options.direction == 'horizontal' ? t.x_speed : t.y_speed;
-			let pos = this.options.direction == 'horizontal' ? t.x_pos : t.y_pos;
+			let speed = this.options.axis == 'horizontal' ? t.x_speed : t.y_speed;
+			let pos = this.options.axis == 'horizontal' ? t.x_pos : t.y_pos;
 
 			if((speed > 0 && pos >=  1) ||
 			   (speed < 0 && pos < -0.1)) {

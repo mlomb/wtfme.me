@@ -26,13 +26,13 @@ export let Variants = [
 		max_elements: 10,
 		max_rotation: 50,
 		max_speed: 0.2,
-		direction: 'horizontal',
+		axis: 'horizontal',
 		make: makeBill
 	}), new MovingElementsPreset({ // flying dollars right-left
 		max_elements: 10,
 		max_rotation: 50,
 		max_speed: -0.2,
-		direction: 'horizontal',
+		axis: 'horizontal',
 		make: makeBill
 	})]
 ];
