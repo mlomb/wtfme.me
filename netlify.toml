@@ -3,6 +3,12 @@
   command = "npm run build"
 
 [[redirects]]
+  from = "https://wtfmeme.netlify.com/*"
+  to = "https://wtfme.me/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/rain/*"
   to = "/rain"
   status = 200
