@@ -3,7 +3,7 @@ import Preset from './Preset';
 export default class ImagePreset extends Preset {
 	constructor(url) {
 		super();
-		this.url = url;
+		this.url = `https://cdn.staticaly.com/img/${url}`;
 	}
 
 	init(root) {
@@ -16,12 +16,12 @@ export default class ImagePreset extends Preset {
 
 export class GiphyPreset extends ImagePreset {
 	constructor(id) {
-		super(`https://media.giphy.com/media/${id}/giphy.gif`);
+		super(`media.giphy.com/media/${id}/giphy.gif`);
 	}
 }
 
 export class ImgurPreset extends ImagePreset {
 	constructor(id) {
-		super(`https://i.imgur.com/${id}.jpg`);
+		super(`i.imgur.com/${id}.jpg`);
 	}
 }
