@@ -2,9 +2,9 @@ import {GiphyPreset} from '@presets/ImagePreset';
 import AudioPreset from '@presets/AudioPreset';
 
 let gifs = [
-    new GiphyPreset('VhXqTSbvMGpoY'),
-    new GiphyPreset('Q2qGVhJJvD68w'),
-    new GiphyPreset('psv1zrhPZM6WI')
+    'VhXqTSbvMGpoY',
+    'Q2qGVhJJvD68w',
+    'psv1zrhPZM6WI'
 ];
 let audios = [
     'https://bottons.xyz/audio/NOOT%20NOOT%20MEME.mp3',
@@ -15,13 +15,14 @@ let audios = [
 ];
 
 let variants = [];
-for(let gif of gifs) {
-    for(let audio of audios) {
-        variants.push([gif, new AudioPreset({
-            url: audio,
-            playonclick: true
-        })]);
-    }
+for(let audio of audios) {
+    variants.push([
+		new GiphyPreset(gifs[Math.floor(Math.random() * gifs.length)]),
+		new AudioPreset({
+	        url: audio,
+	        playonclick: true
+	    })
+	]);
 }
 
 export let Variants = variants;

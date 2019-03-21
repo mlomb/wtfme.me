@@ -15,15 +15,24 @@ export default class AudioPreset extends Preset {
         this.audio = document.createElement('audio');
         this.audio.src = this.options.url;
         this.audio.loop = this.options.loop;
-        this.audio.autoplay = this.options.autoplay;
 
         root.appendChild(this.audio);
 
         if(this.options.playonclick)
-            window.addEventListener('pointerdown', this.pointerdown.bind(this));
+            window.addEventListener('pointerdown', this.play.bind(this));
+		if(this.options.autoplay) {
+			let canplay = () => {
+				this.play();
+				this.audio.removeEventListener('canplaythrough', canplay, false);
+			}
+
+			this.audio.addEventListener('canplaythrough', canplay, false);
+		}
     }
 
-    pointerdown(){
-        this.audio.play();
+    play(){
+        this.audio.play().catch((e) => {
+			console.error("Couldn't play audio:", e.message);
+		});
     }
 }
