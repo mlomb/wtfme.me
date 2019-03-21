@@ -92,5 +92,25 @@ module.exports = [
 		cover: {
 			image: 'i.imgur.com/j274AzM.jpg'
 		}
+	},
+	{
+		title: 'Alf',
+		description: 'Alf',
+		keywords: ['meme', 'alf'],
+		path: 'alf',
+		module: 'alf.js',
+		cover: {
+			image: 'i.imgur.com/5EqgRtW.jpg'
+		}
+	},
+	{
+		title: 'noot',
+		description: 'noot penguin',
+		keywords: ['noot', 'penguin', 'snow'],
+		path: 'noot',
+		module: 'noot.js',
+		cover: {
+			image: 'i.imgur.com/5EqgRtW.jpg'
+		}
 	}
 ];
