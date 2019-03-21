@@ -157,6 +157,7 @@ Displays a horizontally centered text.
 | name | default | description | values |
 |-|-|:-|:-|
 | `content` | `<no content>` | The text to display | |
+| `html` | `false` | Allows the content to render HTML | `true`<br>`false`|
 | `top` | `undefined` | If not `undefined`, the text's style proprerty top | |
 | `bottom` | `undefined` | If not `undefined`, the text's style proprerty bottom | |
 | `center` | `false` | If `true` the text will be in the true center of the page.<br>`top` and `bottom` will be ignored if `true`. | `true`<br>`false`|

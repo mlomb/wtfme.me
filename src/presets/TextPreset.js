@@ -8,13 +8,17 @@ export default class TextPreset extends Preset {
 			content: '<no content>',
 			top: undefined,
 			bottom: undefined,
-			center: false
+			center: false,
+			html: false
 		}, options);
 	}
 
 	init(root) {
 		var p = document.createElement('p');
-		p.innerText = this.options.content;
+		if(this.options.html)
+			p.innerHTML = this.options.content;
+		else
+			p.innerText = this.options.content;
 		if(this.options.center) {
 			p.style.top = '50%';
 			p.style.transform = 'translateY(-50%)';
