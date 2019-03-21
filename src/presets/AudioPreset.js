@@ -19,7 +19,7 @@ export default class AudioPreset extends Preset {
         root.appendChild(this.audio);
 
         if(this.options.playonclick)
-            window.addEventListener('pointerdown', this.play.bind(this));
+            root.addEventListener('pointerdown', this.play.bind(this));
 		if(this.options.autoplay) {
 			let canplay = () => {
 				this.play();
