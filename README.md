@@ -1,6 +1,6 @@
 <p align="center">
 	<a href="https://wtfme.me"><img alt="wtfme.me logo" src="https://raw.githubusercontent.com/mlomb/wtfme.me/master/public/logo-black.png"></a><br>
-	An open source collection of random meme pages<br>
+	An open source collection of random memes and useless pages<br>
 	<a href="https://app.netlify.com/sites/wtfmeme/deploys"><img src="https://api.netlify.com/api/v1/badges/267515db-4262-42d2-ab48-2d0b785379d5/deploy-status" alt="Netlify Status"></a>
 </p>
 
