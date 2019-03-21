@@ -22,7 +22,7 @@ var htmls = [
 		chunks: ['style'],
 
 		templateParameters: {
-			title: 'memes',
+			title: null,
 			description: 'An open source collection of random meme pages',
 			keywords: ['funny', 'random website'],
 			memes: memes
