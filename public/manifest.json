@@ -1,7 +1,7 @@
 {
 	"name": "wtfme.me",
 	"short_name": "wtfme.me",
-	"description": "An open source collection of random meme pages",
+	"description": "An open source collection of random memes and useless pages",
 	"start_url": "/",
 	"theme_color": "#121212",
 	"background_color": "#121212",
