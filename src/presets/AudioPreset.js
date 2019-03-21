@@ -1,17 +1,29 @@
 import Preset from './Preset';
 
 export default class AudioPreset extends Preset {
-    constructor(url) {
+    constructor(options) {
 		super();
-		this.url = url;
+		this.options = Object.assign({
+            url: undefined,
+            autoplay: true,
+            loop: false,
+            playonclick: false
+        }, options);
 	}
 
     init(root) {
-		var audio = document.createElement('audio');
-        audio.src = this.url;
-        //audio.loop = true;
-        audio.autoplay = true;
+        this.audio = document.createElement('audio');
+        this.audio.src = this.options.url;
+        this.audio.loop = this.options.loop;
+        this.audio.autoplay = this.options.autoplay;
 
-		root.appendChild(audio);
-	}
+        root.appendChild(this.audio);
+
+        if(this.options.playonclick)
+            window.addEventListener('pointerdown', this.pointerdown.bind(this));
+    }
+
+    pointerdown(){
+        this.audio.play();
+    }
 }
