@@ -2,6 +2,7 @@
 
 ## Contents
 * [Presets](#presets)
+  * [AudioPreset](#audiopreset)
   * [CanvasPreset](#canvaspreset)
   * [iframePreset](#iframepreset)
   * [ImagePreset](#imagepreset)
@@ -18,6 +19,27 @@ All the presets remain in [`src/presets`](src/presets) which has the alias `@pre
 If a preset requires more than one parameter then a single object **options** is used.
 
 Presets should work well in mobile phones and desktops.
+
+### AudioPreset
+Play an audio from an URL.
+
+| name | default | description | values |
+|-|-|:-|:-|
+| `url` | `undefined` | Source of the audio | |
+| `autoplay` | `true` | Start playing the audio when page load |`true`<br>`false`|
+| `loop` | `false` | Loops the audio|`true`<br>`false` |
+| `playonclick` | `false` | If `true` when you click on the page, the audio will be played. | `true`<br>`false`|
+#### Example
+```js
+import AudioPreset from '@presets/AudioPreset';
+
+...
+
+new AudioPreset({
+    url: 'https://foo.bar/audio.mp3',
+    loop: true
+});
+```
 
 ### CanvasPreset
 The CanvasPreset creates a fullscreen canvas where you can draw to. You are supposed to inherit this class and override the method `frame`. You may call `super.frame` if you want to clear the canvas each frame.  
