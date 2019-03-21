@@ -79,5 +79,13 @@ module.exports = [
 		path: 'alf',
 		module: 'alf.js',
 		cover: 'i.imgur.com/5EqgRtW.jpg'
+	},
+	{
+		title: 'noot',
+		description: 'noot penguin',
+		keywords: ['noot', 'penguin', 'snow'],
+		path: 'noot',
+		module: 'noot.js',
+		cover: 'i.imgur.com/5EqgRtW.jpg'
 	}
 ];
