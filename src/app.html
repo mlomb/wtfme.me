@@ -37,9 +37,25 @@
 		<div class="logo"><a href="https://wtfme.me"><img src="/logo.png" alt="wtfme.me logo"></a></div>
 		<p class="logo-legend">An <a class="link" href="https://github.com/mlomb/wtfme.me" target="_blank">open source</a> collection of random memes and useless pages</p>
 		<div class="gallery-container">
+			<div class="title">Gallery</div>
 			<div class="list">
 			<% for(let meme of memes) { %>
-				<a href="/<%- meme.path %>" target="_blank" title="<%- meme.title %>"><div style="background-image: url(https://cdn.staticaly.com/img/<%- meme.cover %>)"></div></a>
+				<% if(!meme.cover || meme.cover.hidden) continue; %>
+				<a class="item" href="/<%- meme.path %>" target="_blank">
+					<% if(meme.cover.customizable) { %>
+					<span class="customizable">CUSTOMIZABLE</span>
+					<% } %>
+					<% let hasCover = meme.cover.image && meme.cover.image.length > 0; %>
+					<% if(hasCover) { %>
+					<div class="image<%- meme.cover.spaced ? ' spaced' : ''%>" style="background-image: url(https://cdn.staticaly.com/img/<%- meme.cover.image %>)"></div>
+					<% } %>
+					<div class="overlay<%- !hasCover ? ' show' : ''%>">
+						<span><%- meme.title %></span>
+					</div>
+					<% if(meme.cover.customizable) { %>
+					<span class="customizable">CUSTOMIZABLE</span>
+					<% } %>
+				</a>
 			<% } %>
 			</div>
 		</div>

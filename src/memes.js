@@ -6,7 +6,10 @@ module.exports = [
 		keywords: ['404', 'not found'],
 		path: '404',
 		module: '404.js',
-		cover: 'i.imgur.com/tjF63dqg.jpg'
+		cover: {
+			image: 'i.imgur.com/tjF63dqg.jpg',
+			hidden: true
+		}
 	},
 	{
 		title: 'nOpE',
@@ -14,7 +17,9 @@ module.exports = [
 		keywords: ['no', 'nope'],
 		path: 'nope',
 		module: 'nope.js',
-		cover: 'i.imgur.com/9MSWoDh.png'
+		cover: {
+			image: 'i.imgur.com/9MSWoDh.jpg'
+		}
 	},
 	{
 		title: 'Windows error',
@@ -22,7 +27,9 @@ module.exports = [
 		keywords: ['windows errors', 'windows xp', 'windows 7'],
 		path: 'windows',
 		module: 'windows.js',
-		cover: 'i.imgur.com/eiQCC9I.jpg'
+		cover: {
+			image: 'i.imgur.com/eiQCC9I.jpg'
+		}
 	},
 	{
 		title: 'Enano asador',
@@ -30,7 +37,9 @@ module.exports = [
 		keywords: ['asado', 'boca', 'enano'],
 		path: 'enanoasador',
 		module: 'enanoasador.js',
-		cover: 'i.imgur.com/12W3qui.jpg'
+		cover: {
+			image: 'i.imgur.com/12W3qui.jpg'
+		}
 	},
 	{
 		title: 'Spongebob',
@@ -38,7 +47,9 @@ module.exports = [
 		keywords: ['spongebob', 'squarepants', 'bikini bottom'],
 		path: 'spongebob',
 		module: 'spongebob.js',
-		cover: 'i.imgur.com/h3bJ8Ov.jpg'
+		cover: {
+			image: 'i.imgur.com/h3bJ8Ov.jpg'
+		}
 	},
 	{
 		title: 'rain',
@@ -46,7 +57,10 @@ module.exports = [
 		keywords: ['rain', 'falling words'],
 		path: 'rain',
 		module: 'rain.js',
-		cover: ''
+		cover: {
+			image: '',
+			customizable: true
+		}
 	},
 	{
 		title: 'money money money',
@@ -54,7 +68,9 @@ module.exports = [
 		keywords: ['money', 'cash', 'raining dollars'],
 		path: 'money',
 		module: 'money.js',
-		cover: 'i.imgur.com/YIXxdeR.png'
+		cover: {
+			image: 'i.imgur.com/YIXxdeR.png'
+		}
 	},
 	{
 		title: 'Teemo',
@@ -62,7 +78,10 @@ module.exports = [
 		keywords: ['Teemo', 'LoL', 'troll'],
 		path: 'teemo',
 		module: 'teemo.js',
-		cover: 'i.imgur.com/VSgHcSh.png'
+		cover: {
+			image: 'i.imgur.com/VSgHcSh.png',
+			spaced: true
+		}
 	},
 	{
 		title: 'Sexy girl',
@@ -70,6 +89,8 @@ module.exports = [
 		keywords: ['rickrolled', 'girl', 'troll'],
 		path: 'sexygirl',
 		module: 'rickrolled.js',
-		cover: 'i.imgur.com/j274AzM.jpg'
+		cover: {
+			image: 'i.imgur.com/j274AzM.jpg'
+		}
 	}
 ];

@@ -18,7 +18,12 @@ module.exports = [
     keywords: ['keyword1', 'keyword2'],
     path: 'meme',
     module: 'meme.js',
-    cover: 'https://i.imgur.com/XXXXXXX.png'
+    cover: {
+        image: '<url>',
+        hidden: true,
+        spaced: false,
+        customizable: false
+    }
   },
   ...
 ]
