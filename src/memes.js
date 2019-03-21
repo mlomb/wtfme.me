@@ -110,7 +110,7 @@ module.exports = [
 		path: 'noot',
 		module: 'noot.js',
 		cover: {
-			image: 'i.imgur.com/5EqgRtW.jpg'
+			image: 'i.imgur.com/ZZA2iar.gif'
 		}
 	}
 ];
