@@ -1,13 +1,16 @@
 const MobileDetect = require('mobile-detect');
 
 window.mobile_detect = new MobileDetect(window.navigator.userAgent);
+if(window.mobile_detect.is('AndroidOS')) {
+	document.body.classList.add('android');
+}
 
 const context = require.context('./memes', true, /\.(js)$/);
 
 const module = context(`./${window.meme_module}`);
 const root = document.getElementById('root');
 
-console.log('%c Want to add a meme? https://github.com/mlomb/wtfme.me', 'background: #222; color: #bada55');
+window.console.log('%c Want to add a meme? https://github.com/mlomb/wtfme.me', 'background: #222; color: #bada55');
 
 if(module.Variants && module.Variants.length > 0) {
 	// round-robin variants

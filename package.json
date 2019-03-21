@@ -2,7 +2,7 @@
 	"name": "wtfme.me",
 	"scripts": {
 		"build": "cross-env NODE_ENV=production webpack -p",
-		"dev": "cross-env NODE_ENV=development webpack-dev-server"
+		"dev": "cross-env NODE_ENV=development webpack-dev-server --hot --port 8080 --host 0.0.0.0"
 	},
 	"repository": {
 		"type": "git",
