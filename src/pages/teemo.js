@@ -1,19 +1,16 @@
-import SoundCloudPreset from '@presets/SoundCloudPreset';
-import CanvasPreset from '@presets/CanvasPreset.js';
+import AudioPreset from '@presets/AudioPreset';
 import {GiphyPreset} from '@presets/ImagePreset';
 
-const deal = new GiphyPreset('Tte95WnDGq5Gg');
-const deal2 = new GiphyPreset('3eukDb5E6ZNkI');
+let gifs = ['Tte95WnDGq5Gg', '3eukDb5E6ZNkI'];
+let audios = ['Teemo%20attack', 'Captain%20Teemo', 'Teemo%20-%20Laugh%203', 'Teemo%20-%20Yes%2C%20sir', 'Teemo%20-%20Laugh%201', 'Teemo%20-%20Laugh%202',
+'Never%20understimate', `Teemo%20-%20Size%20doesn´t%20mean%20everything`]
 
-export let Variants = [
-	[new SoundCloudPreset('591518472'), deal],
-	[new SoundCloudPreset('199105914'), deal],
-	[new SoundCloudPreset('591531243'), deal],
-	[new SoundCloudPreset('591531087'), deal],
-	[new SoundCloudPreset('591531159'), deal],
-	[new SoundCloudPreset('591518472'), deal2],
-	[new SoundCloudPreset('199105914'), deal2],
-	[new SoundCloudPreset('591531243'), deal2],
-	[new SoundCloudPreset('591531087'), deal2],
-	[new SoundCloudPreset('591531159'), deal2]
-];
+let variants = [];
+
+for(let gif of gifs){
+	for(let audio of audios){
+		variants.push([new AudioPreset('https://bottons.xyz/audio/' + audio + '.mp3'), new GiphyPreset(gif)])
+	}
+}
+
+export let Variants = variants;
