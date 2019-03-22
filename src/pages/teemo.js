@@ -9,7 +9,10 @@ let variants = [];
 
 for(let gif of gifs){
 	for(let audio of audios){
-		variants.push([new AudioPreset('https://bottons.xyz/audio/' + audio + '.mp3'), new GiphyPreset(gif)])
+		variants.push([new AudioPreset({
+			url:'https://bottons.xyz/audio/' + audio + '.mp3',
+			playonclick: true
+		}), new GiphyPreset(gif)])
 	}
 }
 
