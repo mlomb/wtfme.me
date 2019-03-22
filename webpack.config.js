@@ -10,7 +10,10 @@ const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
 
 // Build info
-let revision = require('child_process').execSync('git describe --always --abbrev=7 --dirty="-dirty"').toString().trim();
+let revision = 'unknown';
+try {
+	revision = require('child_process').execSync('git describe --always --abbrev=7 --dirty="-dirty"').toString().trim();
+} catch(e) {}
 
 // Prepare all the memes
 const memes = require('./src/memes.js');
