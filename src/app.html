@@ -69,7 +69,7 @@ let display_title = title ? `${title} | wtfme.me` : 'wtfme.me';
 			<div class="list">
 			<% for(let meme of memes) { %>
 				<% if(!meme.cover || meme.cover.hidden) continue; %>
-				<a class="item" href="/<%- meme.path %><%- process.env.NODE_ENV === 'development' ? '.html' : '' %>" target="_blank">
+				<a class="item" href="/<%- meme.path %><%- process.env.NODE_ENV === 'development' ? '.html' : '' %>">
 					<% if(meme.cover.customizable) { %>
 					<span class="customizable">CUSTOMIZABLE</span>
 					<% } %>

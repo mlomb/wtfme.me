@@ -12,8 +12,6 @@ const root = document.getElementById('root');
 
 window.console.log('%c Want to add a meme? https://github.com/mlomb/wtfme.me', 'background: #222; color: #bada55');
 
-document.body.style.overflow = 'hidden';
-
 if(module.Variants && module.Variants.length > 0) {
 	// round-robin variants
 	var all = Array.apply(null, {length: module.Variants.length}).map(Number.call, Number); // fill array [1...N]
