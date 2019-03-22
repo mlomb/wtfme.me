@@ -120,7 +120,7 @@ module.exports = [
 		path: 'blue',
 		module: 'blue.js',
 		cover: {
-			image: 'https://gradientjoy.com/150x150'
+			image: 'i.imgur.com/Amjzkqa.jpg'
 		}
 	}
 ];
