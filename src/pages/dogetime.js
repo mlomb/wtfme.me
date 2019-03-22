@@ -48,8 +48,8 @@ class DogePet extends Preset {
 	say(text, duration = 1000) {
 		let say = document.createElement('span');
 		say.style.position = 'absolute';
-		say.style.top = (Math.random() * 84 + 8) + '%';
-		say.style.left = (Math.random() * 84 + 8) + '%';
+		say.style.top = (Math.random() * 80 + 2) + '%';
+		say.style.left = (Math.random() * 80 + 2) + '%';
 		say.style.color = 'hsl(' + Math.floor(Math.random() * 360) +', 100%, 50%)';
 		say.style.fontSize = (Math.floor(Math.random() * 10) + 25) + 'px';
 		//say.style.textShadow = 'black 0px 0px 6px';
@@ -110,7 +110,7 @@ export let Variants = [
 	[
 		new BackgroundPreset({ color: '#ffe698'}),
 		new ImgurPreset('BsddzzM'),
-		new DogePet(),
-		new TimePreset()
+		new TimePreset(),
+		new DogePet()
 	]
 ];
