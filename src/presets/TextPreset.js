@@ -9,24 +9,36 @@ export default class TextPreset extends Preset {
 			top: undefined,
 			bottom: undefined,
 			center: false,
-			html: false
+			html: false,
+			select: true,
+			fontSize: undefined
 		}, options);
 	}
 
 	init(root) {
-		var p = document.createElement('p');
-		if(this.options.html)
-			p.innerHTML = this.options.content;
-		else
-			p.innerText = this.options.content;
+		this.element = document.createElement('p');
+		this.updateText();
 		if(this.options.center) {
-			p.style.top = '50%';
-			p.style.transform = 'translateY(-50%)';
+			this.element.style.top = '50%';
+			this.element.style.transform = 'translateY(-50%)';
 		} else {
-			p.style.top =  this.options.top;
-			p.style.bottom =  this.options.bottom;
+			this.element.style.top =  this.options.top;
+			this.element.style.bottom =  this.options.bottom;
 		}
-        p.classList.add("text");
-		root.appendChild(p);
+        this.element.classList.add("text");
+		if(!this.options.select) {
+        	this.element.classList.add("noselect");
+		}
+		if(this.options.fontSize) {
+			this.element.style.fontSize = this.options.fontSize;
+		}
+		root.appendChild(this.element);
+	}
+
+	updateText() {
+		if(this.options.html)
+			this.element.innerHTML = this.options.content;
+		else
+			this.element.innerText = this.options.content;
 	}
 }

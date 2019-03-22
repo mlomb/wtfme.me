@@ -180,6 +180,8 @@ Displays a horizontally centered text.
 | `top` | `undefined` | If not `undefined`, the text's style proprerty top | |
 | `bottom` | `undefined` | If not `undefined`, the text's style proprerty bottom | |
 | `center` | `false` | If `true` the text will be in the true center of the page.<br>`top` and `bottom` will be ignored if `true`. | `true`<br>`false`|
+| `select` | `true` | Should the text be selectable? | `true`<br>`false`|
+| `fontSize` | `undefined` | Override the font size on all resolutions | |
 #### Example
 ```js
 import TextPreset from '@presets/TextPreset';
