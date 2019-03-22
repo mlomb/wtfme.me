@@ -36,6 +36,16 @@ module.exports = [
         }
     },
     {
+        title: "Doge Time",
+        description: "such time. so wow",
+        keywords: ["doge", "time", "current time", "dog time"],
+        path: "dogetime",
+        module: "dogetime.js",
+        cover: {
+            image: "i.imgur.com/Bsw1jCR.png"
+        }
+    },
+    {
         title: "Enano asador",
         description: "Enano asador bostero",
         keywords: ["asado", "boca", "enano"],
