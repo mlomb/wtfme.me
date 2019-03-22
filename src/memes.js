@@ -112,5 +112,15 @@ module.exports = [
 		cover: {
 			image: 'i.imgur.com/ZZA2iar.gif'
 		}
+	},
+	{
+		title: 'Blue',
+		description: 'Blue',
+		keywords: ['music', 'blue', 'eiffel'],
+		path: 'blue',
+		module: 'blue.js',
+		cover: {
+			image: 'https://gradientjoy.com/150x150'
+		}
 	}
 ];
