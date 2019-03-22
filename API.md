@@ -3,6 +3,7 @@
 ## Contents
 * [Presets](#presets)
   * [AudioPreset](#audiopreset)
+  * [BackgroundPreset](#BackgroundPreset)
   * [CanvasPreset](#canvaspreset)
   * [iframePreset](#iframepreset)
   * [ImagePreset](#imagepreset)
@@ -38,6 +39,24 @@ import AudioPreset from '@presets/AudioPreset';
 new AudioPreset({
     url: 'https://foo.bar/audio.mp3',
     loop: true
+});
+```
+### BackgroundPreset
+Show a fullscreen color or image.
+
+| name | default | description |
+|-|-|:-|
+| `color` | `undefined` | Set the color of the background|
+| `url` | `undefined` | Set the image of the background
+#### Example
+```js
+import BackgroundPreset from '@presets/BackgroundPreset';
+
+...
+
+new BackgroundPreset({
+    url: 'https://foo.bar/image.jpg',
+    color: '#123456'
 });
 ```
 

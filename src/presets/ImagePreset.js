@@ -1,16 +1,10 @@
-import Preset from './Preset';
+import BackgroundPreset from './BackgroundPreset';
 
-export default class ImagePreset extends Preset {
+export default class ImagePreset extends BackgroundPreset {
 	constructor(url) {
-		super();
-		this.url = `https://cdn.staticaly.com/img/${url}`;
-	}
-
-	init(root) {
-		var img = document.createElement('div');
-		img.classList.add("fullscreen-contain");
-		img.style.backgroundImage = 'url(' + this.url + ')';
-		root.appendChild(img);
+		super({
+			url: `https://cdn.staticaly.com/img/${url}`
+		});
 	}
 }
 
