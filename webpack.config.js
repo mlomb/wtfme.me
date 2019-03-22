@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
+const SitemapPlugin = require('sitemap-webpack-plugin').default;
 
 // Prepare all the memes
 const memes = require('./src/memes.js');
@@ -23,11 +24,18 @@ var htmls = [
 
 		templateParameters: {
 			title: null,
-			description: 'An open source collection of random meme pages',
-			keywords: ['funny', 'random website'],
+			description: 'An open source collection of random memes and useless pages',
+			keywords: ['funny', 'useless websites', 'random pages'],
 			memes: memes
 		}
 	})
+];
+var sitemap = [
+	{
+		path: '/',
+		priority: '1',
+		changeFreq: 'daily'
+	}
 ];
 
 memes.forEach(function(meme) {
@@ -40,6 +48,11 @@ memes.forEach(function(meme) {
 
 			templateParameters: meme
 		}));
+		sitemap.push({
+			path: meme.path,
+			priority: '0.8',
+			changeFreq: 'weekly'
+		})
 
 		console.log(`Meme ${meme.title} registred!`);
 	} catch(e) {
@@ -92,6 +105,7 @@ module.exports = {
 		new CopyWebpackPlugin([
 			{ from: 'public' }
 		]),
+    	new SitemapPlugin('https://wtfme.me', sitemap, { skipGzip: true }),
 		new MiniCssExtractPlugin({
 			filename: devMode ? '[name].css' : '[name].[contenthash].css'
 		}),

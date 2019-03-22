@@ -18,9 +18,15 @@ canvas {
 	background-color: transparent;
 }
 
+a {
+	color: white;
+	text-decoration: none;
+}
+
 #root {
 	width: 100%;
 	height: 100vh;
+    overflow: hidden;
 }
 
 @supports (-webkit-appearance:none) {
@@ -154,6 +160,28 @@ canvas {
 				}
 			}
 		}
+	}
+}
+
+.back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #262626;
+	padding: 5px;
+    border: 2px solid #333333;
+    border-left: none;
+    border-top: none;
+	border-bottom-right-radius: 5px;
+	
+	img {
+	    width: 45px;
+	    height: 30px;
+		vertical-align: middle;
+	}
+	span {
+		vertical-align: middle;
+	    margin-left: 4px;
 	}
 }
 

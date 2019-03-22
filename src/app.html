@@ -15,7 +15,7 @@
 	<meta charset="utf-8">
 	<title><%= title ? `${title} | wtfme.me` : 'wtfme.me' %></title>
 	<meta name="description" content="<%= description %>">
-	<meta name="keywords" content="memes, gifs, wtfmeme, useless websites, random pages, <%= keywords.join(",") %>">
+	<meta name="keywords" content="memes,gifs,wtfmeme,<%= keywords.join(",") %>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<meta name="theme-color" content="#121212">
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -32,6 +32,10 @@
 <body>
 	<% if(module.length) { %>
 		<div id="root"></div>
+		<a href="/" title="wtfme.me"  class="back">
+			<img src="/logo-small.png" alt="wtfme.me logo">
+			<span>Go Back</span>
+		</a>
 		<script>window.meme_module = '<%= module %>';</script>
 	<% } else { %>
 		<div class="logo"><a href="https://wtfme.me"><img src="/logo.png" alt="wtfme.me logo"></a></div>
@@ -41,7 +45,7 @@
 			<div class="list">
 			<% for(let meme of memes) { %>
 				<% if(!meme.cover || meme.cover.hidden) continue; %>
-				<a class="item" href="/<%- meme.path %>" target="_blank">
+				<a class="item" href="/<%- meme.path %><%- process.env.NODE_ENV === 'development' ? '.html' : '' %>" target="_blank">
 					<% if(meme.cover.customizable) { %>
 					<span class="customizable">CUSTOMIZABLE</span>
 					<% } %>
