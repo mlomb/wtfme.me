@@ -3,14 +3,14 @@ import CanvasPreset from '@presets/CanvasPreset.js';
 class WindowsError extends CanvasPreset {
     constructor(url){
         super();
-        this.url = url;
+        this.url = `https://cdn.staticaly.com/img/${url}`;
         this.backgrounds = ['wjbADbb', 'lojmr', 'FyCO6pw'];
     }
 
     init(root){
 		var bg = document.createElement('div');
 		bg.classList.add("fullscreen-cover");
-		bg.style.backgroundImage = 'url(http://i.imgur.com/' + this.backgrounds[Math.floor(Math.random() * this.backgrounds.length)] + '.jpg)';
+		bg.style.backgroundImage = 'url(https://cdn.staticaly.com/img/i.imgur.com/' + this.backgrounds[Math.floor(Math.random() * this.backgrounds.length)] + '.jpg)';
 
         super.init(bg);
 		root.prepend(bg);
@@ -26,10 +26,10 @@ class WindowsError extends CanvasPreset {
 }
 
 export let Variants = [
-    new WindowsError('https://i.imgur.com/jccR2lH.jpg'), // delete Windows
-    new WindowsError('https://i.imgur.com/GUfDHmu.jpg'), // error recording error code
-    new WindowsError('https://i.imgur.com/UyIeVFW.png'), // linux
-    new WindowsError('https://i.imgur.com/kwVhVDZ.png'), // windows error recording has stopped working
-    new WindowsError('https://i.imgur.com/UIDJqA2.png'), // something happened
-    new WindowsError('https://i.imgur.com/xh7hbWB.jpg'), // AAAAAAAAAAAAAA
+    new WindowsError('i.imgur.com/jccR2lH.jpg'), // delete Windows
+    new WindowsError('i.imgur.com/GUfDHmu.jpg'), // error recording error code
+    new WindowsError('i.imgur.com/UyIeVFW.png'), // linux
+    new WindowsError('i.imgur.com/kwVhVDZ.png'), // windows error recording has stopped working
+    new WindowsError('i.imgur.com/UIDJqA2.png'), // something happened
+    new WindowsError('i.imgur.com/xh7hbWB.jpg'), // AAAAAAAAAAAAAA
 ];
