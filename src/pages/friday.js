@@ -11,6 +11,7 @@ let friday = [
     [new GiphyPreset('3oEjHKjVoNVsCeMoDe'), yes, question],
     [new GiphyPreset('sTczweWUTxLqg'), yes, question],
     [new GiphyPreset('b23a67ZhemOe4'), yes, question],
+    [new GiphyPreset('bTveRfBYidENtRBJw9'), yes, question],
     [new GiphyPreset('yLPJtMLnRiP6w'), yes, question]
 ];
 let notFriday = [

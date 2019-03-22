@@ -26,6 +26,16 @@ module.exports = [
         }
     },
     {
+        title: "Am i awesome?",
+        description: "Am i awesome?",
+        keywords: ["question", "am i", "awesome"],
+        path: "awesome",
+        module: "awesome.js",
+        cover: {
+            image: "i.imgur.com/5EqgRtW.jpg"
+        }
+    },
+    {
         title: "Blue",
         description: "Blue",
         keywords: ["music", "blue", "eiffel"],
@@ -62,7 +72,7 @@ module.exports = [
         path: "friday",
         module: "friday.js",
         cover: {
-            image: "i.imgur.com/12W3qui.jpg"
+            image: "media.giphy.com/media/qn7gilIRmjpcc/giphy.gif"
         }
     },
     {
