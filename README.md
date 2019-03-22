@@ -20,7 +20,7 @@ module.exports = [
     module: 'meme.js',
     cover: {
         image: '<url>',
-        hidden: true,
+        hidden: false,
         spaced: false,
         customizable: false
     }
