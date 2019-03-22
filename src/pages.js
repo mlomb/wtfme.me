@@ -32,7 +32,7 @@ module.exports = [
         path: "awesome",
         module: "awesome.js",
         cover: {
-            image: "i.imgur.com/5EqgRtW.jpg"
+            image: "media.giphy.com/media/12Hgz11xFHeKuA/giphy.gif"
         }
     },
     {
