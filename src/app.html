@@ -46,7 +46,7 @@ let display_title = title ? `${title} | wtfme.me` : 'wtfme.me';
 	  gtag('config', 'UA-136310149-1');
 	</script>
 </head>
-<body>
+<body<%= !module.length ? ` class="index"` : ''%>>
 	<% if(module.length) { %>
 		<div id="fb-root"></div>
 		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.2&appId=521992708626982&autoLogAppEvents=1"></script>
@@ -87,6 +87,11 @@ let display_title = title ? `${title} | wtfme.me` : 'wtfme.me';
 					<% } %>
 				</a>
 			<% } %>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<a href="https://github.com/mlomb/wtfme.me" target="_blank">view on <span class="github"></span></a><span class="separator">·</span><span><%= new Date().getFullYear() %></span>
 			</div>
 		</div>
 	<% } %>
