@@ -12,11 +12,13 @@
 					is open source
 			https://github.com/mlomb/wtfme.me
 -->
+<!-- rev: <%= revision %> time: <%= new Date().toISOString() %> -->
 <%
 let display_title = title ? `${title} | wtfme.me` : 'wtfme.me';
 %>
 	<meta charset="utf-8">
 	<title><%= display_title %></title>
+	
 	<meta name="description" content="<%= description %>">
 	<meta name="keywords" content="memes,gifs,wtfmeme,<%= keywords.join(",") %>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -29,9 +31,10 @@ let display_title = title ? `${title} | wtfme.me` : 'wtfme.me';
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="wtfme.me">
 	<meta property="fb:app_id" content="521992708626982">
-
+ 
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="manifest" href="/manifest.json">
+	
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136310149-1"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];

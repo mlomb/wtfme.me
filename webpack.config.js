@@ -9,6 +9,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
 
+// Build info
+let revision = require('child_process').execSync('git describe --always --abbrev=7 --dirty="-dirty"').toString().trim();
+
 // Prepare all the memes
 const memes = require('./src/memes.js');
 
@@ -23,6 +26,7 @@ var htmls = [
 		chunks: ['style'],
 
 		templateParameters: {
+			revision: revision,
 			title: null,
 			description: 'An open source collection of random memes and useless pages',
 			keywords: ['funny', 'useless websites', 'random pages'],
@@ -46,7 +50,10 @@ memes.forEach(function(meme) {
 			filename: meme.path + '.html',
 			chunks: ['app', 'style'],
 
-			templateParameters: meme
+			templateParameters: {
+				...meme,
+				revision: revision
+			}
 		}));
 		sitemap.push({
 			path: meme.path,
