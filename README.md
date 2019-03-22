@@ -54,10 +54,10 @@ class WindowsError extends CanvasPreset {
 }
 
 export let Variants = [
-  new WindowsError('https://i.imgur.com/jccR2lH.jpg'), // delete Windows
-  new WindowsError('https://i.imgur.com/GUfDHmu.jpg'), // error recording error code
-  new WindowsError('https://i.imgur.com/UyIeVFW.png'), // linux
-  new WindowsError('https://i.imgur.com/kwVhVDZ.png'), // windows error recording has stopped working
+  new WindowsError('i.imgur.com/jccR2lH.jpg'), // delete Windows
+  new WindowsError('i.imgur.com/GUfDHmu.jpg'), // error recording error code
+  new WindowsError('i.imgur.com/UyIeVFW.png'), // linux
+  new WindowsError('i.imgur.com/kwVhVDZ.png'), // windows error recording has stopped working
   ...
 ];
 ```
