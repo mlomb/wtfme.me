@@ -8,6 +8,8 @@
 wtfme.me is a community project. We invite you to add your random meme ideas. Even if you don't know how to code, you can throw ideas in the issues page.
 
 ### Memes
+*Note: terms **meme** and (meme) **page** are used interchangeably*
+
 Each meme must be defined in `src/pages.js` including all the relevant metadata like so:
 ```js
 module.exports = [
