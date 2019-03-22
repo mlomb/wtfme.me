@@ -46,6 +46,16 @@ module.exports = [
         }
     },
     {
+        title: "Friday",
+        description: "Is it friday?",
+        keywords: ["friday", "party", "question"],
+        path: "friday",
+        module: "friday.js",
+        cover: {
+            image: "i.imgur.com/12W3qui.jpg"
+        }
+    },
+    {
         title: "money money money",
         description: "money money money",
         keywords: ["money", "cash", "raining dollars"],
