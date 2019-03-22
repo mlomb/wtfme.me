@@ -56,10 +56,12 @@ let display_title = title ? `${title} | wtfme.me` : 'wtfme.me';
 			<img src="/logo-small.png" alt="wtfme.me logo">
 			<span>Go Back</span>
 		</a>
+		<% if(module !== '404.js') { %>
 		<div class="social">
 			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a><br>
 			<div class="fb-like" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 		</div>
+		<% } %>
 		<script>window.meme_module = '<%= module %>';</script>
 	<% } else { %>
 		<div class="logo"><a href="https://wtfme.me"><img src="/logo.png" alt="wtfme.me logo"></a></div>
