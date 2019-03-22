@@ -14,7 +14,6 @@
 -->
 <%
 let display_title = title ? `${title} | wtfme.me` : 'wtfme.me';
-let display_image = module.length && cover.image ? cover.image : 'https://wtfme.me/logo.png';
 %>
 	<meta charset="utf-8">
 	<title><%= display_title %></title>
@@ -25,10 +24,11 @@ let display_image = module.length && cover.image ? cover.image : 'https://wtfme.
 	
 	<meta property="og:title" content="<%= display_title %>">
 	<meta property="og:description" content="<%= description %>">
-	<meta property="og:image" content="<%= display_image %>">
+	<meta property="og:image" content="https://wtfme.me/logo-social.png">
 	<meta property="og:url" content="<%= module.length ? `https://wtfme.me/${path}` : 'https://wtfme.me' %>">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="wtfme.me">
+	<meta property="fb:app_id" content="521992708626982">
 
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="manifest" href="/manifest.json">
