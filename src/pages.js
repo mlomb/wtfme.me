@@ -26,6 +26,16 @@ module.exports = [
         }
     },
     {
+        title: "Am i awesome?",
+        description: "Am i awesome?",
+        keywords: ["question", "am i", "awesome"],
+        path: "awesome",
+        module: "awesome.js",
+        cover: {
+            image: "media.giphy.com/media/12Hgz11xFHeKuA/giphy.gif"
+        }
+    },
+    {
         title: "Blue",
         description: "Blue",
         keywords: ["music", "blue", "eiffel"],
@@ -65,6 +75,16 @@ module.exports = [
             image: "media.giphy.com/media/x48I9yoFRlWHC/giphy.gif"
         }
 	},
+    {
+        title: "Friday",
+        description: "Is it friday?",
+        keywords: ["friday", "party", "question"],
+        path: "friday",
+        module: "friday.js",
+        cover: {
+            image: "media.giphy.com/media/qn7gilIRmjpcc/giphy.gif"
+        }
+    },
     {
         title: "money money money",
         description: "money money money",
