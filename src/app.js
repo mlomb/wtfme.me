@@ -5,9 +5,9 @@ if(window.mobile_detect.is('AndroidOS')) {
 	document.body.classList.add('android');
 }
 
-const context = require.context('./memes', true, /\.(js)$/);
+const context = require.context('./pages', true, /\.(js)$/);
 
-const module = context(`./${window.meme_module}`);
+const module = context(`./${window.page_module}`);
 const root = document.getElementById('root');
 
 window.console.log('%c Want to add a meme? https://github.com/mlomb/wtfme.me', 'background: #222; color: #bada55');
@@ -15,7 +15,7 @@ window.console.log('%c Want to add a meme? https://github.com/mlomb/wtfme.me', '
 if(module.Variants && module.Variants.length > 0) {
 	// round-robin variants
 	var all = Array.apply(null, {length: module.Variants.length}).map(Number.call, Number); // fill array [1...N]
-	var viewed_str = sessionStorage.getItem(window.meme_module) || "";
+	var viewed_str = sessionStorage.getItem(window.page_module) || "";
 	var viewed = viewed_str.length > 0 ? viewed_str.split(",") : [];
 	var not_viewed = all.filter(n => !viewed.includes(`${n}`));
 
@@ -32,7 +32,7 @@ if(module.Variants && module.Variants.length > 0) {
 		variant = [variant];
 
 	viewed.push(index);
-	sessionStorage.setItem(window.meme_module, viewed.join(","));
+	sessionStorage.setItem(window.page_module, viewed.join(","));
 
 	for(var v of variant) {
 		v.init(root);

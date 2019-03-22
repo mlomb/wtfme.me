@@ -15,10 +15,9 @@ try {
 	revision = require('child_process').execSync('git describe --always --abbrev=7 --dirty="-dirty"').toString().trim();
 } catch(e) {}
 
-// Prepare all the memes
-const memes = require('./src/memes.js');
+const pages = require('./src/pages.js');
 
-memes.sort((a, b) => (a.title || "_").localeCompare(b.title || "_"));
+pages.sort((a, b) => (a.title || "_").localeCompare(b.title || "_"));
 
 var htmls = [
 	// index
@@ -33,7 +32,7 @@ var htmls = [
 			title: null,
 			description: 'An open source collection of random memes and useless pages',
 			keywords: ['funny', 'useless websites', 'random pages'],
-			memes: memes
+			pages: pages
 		}
 	})
 ];
@@ -45,29 +44,29 @@ var sitemap = [
 	}
 ];
 
-memes.forEach(function(meme) {
+pages.forEach(function(page) {
 	try {
 		htmls.push(new HtmlWebpackPlugin({
 			template: './src/app.html',
 			inject: true,
-			filename: meme.path + '.html',
+			filename: page.path + '.html',
 			chunks: ['app', 'style'],
 
 			templateParameters: {
-				...meme,
+				...page,
 				revision: revision
 			}
 		}));
 		sitemap.push({
-			path: meme.path,
+			path: page.path,
 			priority: '0.8',
 			changeFreq: 'weekly'
 		})
 
-		console.log(`Meme ${meme.title} registred!`);
+		console.log(`Page ${page.title} registred!`);
 	} catch(e) {
 		// Rotten meme
-		console.log(`Meme ${meme.title || "<no title>"} is rotten`);
+		console.log(`Page ${page.title || "<no title>"} is rotten`);
 		console.error(e);
 	}
 });

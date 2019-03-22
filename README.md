@@ -8,7 +8,7 @@
 wtfme.me is a community project. We invite you to add your random meme ideas. Even if you don't know how to code, you can throw ideas in the issues page.
 
 ### Memes
-Each meme must be defined in `src/memes.js` including all the relevant metadata like so:
+Each meme must be defined in `src/pages.js` including all the relevant metadata like so:
 ```js
 module.exports = [
   ...
@@ -28,7 +28,7 @@ module.exports = [
   ...
 ]
 ```
-Memes are located under `src/memes`. The name of the file must match the `module` variable in `src/memes.js`.
+Memes are located under `src/pages`. The name of the file must match the `module` variable in `src/pages.js`.
 The module must export an array called `Variants`. Each item must be a `Preset` object or an array of `Preset` objects.  
 For example:
 ```js
@@ -43,7 +43,7 @@ export let Variants = [
 
 ### Variants
 A single meme page may have multiple versions to show. For example, meme [`windows`](https://wtfme.me/windows) changes the error dialog every time someone refreshes the page.  
-Extracted from [`src/memes/windows.js`](src/memes/windows.js):
+Extracted from [`src/pages/windows.js`](src/pages/windows.js):
 ```js
 ...
 
@@ -112,13 +112,13 @@ See [the first meme example](#Memes). A variant may be an array of simple preset
 For example, if you want to show a fullscreen GIF with a sound you could combine a [`ImagePreset`](API.md#imagepreset) with a [`SoundCloudPreset`](API.md#soundcloudpreset).
 
 #### More advanced / Specific presets
-You can always define or inherit a preset inside the meme module to create custom behavior. You can find an example of this in [`src/memes/windows.js`](src/memes/windows.js) where it defines the WindowsError preset that inherits the CanvasPreset.
+You can always define or inherit a preset inside the meme module to create custom behavior. You can find an example of this in [`src/pages/windows.js`](src/pages/windows.js) where it defines the WindowsError preset that inherits the CanvasPreset.
 
 #### Presets API
 You can find the API documentation in [API.md](API.md).
 
 ### Customizable memes
-Some pages can be dynamic, for example [`rain`](https://wtfme.me/rain/Hello%20World) allows to change the raining text. You can see the implementation in [`src/memes/rain.js`](src/memes/rain.js).  
+Some pages can be dynamic, for example [`rain`](https://wtfme.me/rain/Hello%20World) allows to change the raining text. You can see the implementation in [`src/pages/rain.js`](src/pages/rain.js).  
 It should be an explanation on how to customize the meme in the base path (/rain in this case).  
 Make sure to update [`netlify.toml`](netlify.toml) with the corresponding redirect.  
 
@@ -132,7 +132,7 @@ To build for deployment run
 ```sh
 npm run build
 ```
-Once building, the script will pick up all the memes defined in [`src/memes.js`](src/memes.js) and generate all the static HTML files in the `dist` directory.
+Once building, the script will pick up all the memes defined in [`src/pages.js`](src/pages.js) and generate all the static HTML files in the `dist` directory.
 
 ### Development
 To start a development server run
@@ -141,7 +141,7 @@ npm run dev
 ```
 You will be able to access the site in `localhost:8080`. Note that you should access the pages using `.html`, for example `localhost:8080/nope.html`. The dev server should have hot reloading enabled.
 
-*Note: if you modify memes.js you have to restart the dev server to pick up the changes*
+*Note: if you modify pages.js you have to restart the dev server to pick up the changes*
 
 ## License
 

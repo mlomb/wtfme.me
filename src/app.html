@@ -62,27 +62,27 @@ let display_title = title ? `${title} | wtfme.me` : 'wtfme.me';
 			<div class="fb-like" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 		</div>
 		<% } %>
-		<script>window.meme_module = '<%= module %>';</script>
+		<script>window.page_module = '<%= module %>';</script>
 	<% } else { %>
 		<div class="logo"><a href="https://wtfme.me"><img src="/logo.png" alt="wtfme.me logo"></a></div>
 		<p class="logo-legend">An <a class="link" href="https://github.com/mlomb/wtfme.me" target="_blank">open source</a> collection of random memes and useless pages</p>
 		<div class="gallery-container">
 			<div class="title">Gallery</div>
 			<div class="list">
-			<% for(let meme of memes) { %>
-				<% if(!meme.cover || meme.cover.hidden) continue; %>
-				<a class="item" href="/<%- meme.path %><%- process.env.NODE_ENV === 'development' ? '.html' : '' %>">
-					<% if(meme.cover.customizable) { %>
+			<% for(let page of pages) { %>
+				<% if(!page.cover || page.cover.hidden) continue; %>
+				<a class="item" href="/<%- page.path %><%- process.env.NODE_ENV === 'development' ? '.html' : '' %>">
+					<% if(page.cover.customizable) { %>
 					<span class="customizable">CUSTOMIZABLE</span>
 					<% } %>
-					<% let hasCover = meme.cover.image && meme.cover.image.length > 0; %>
+					<% let hasCover = page.cover.image && page.cover.image.length > 0; %>
 					<% if(hasCover) { %>
-					<div class="image<%- meme.cover.spaced ? ' spaced' : ''%>" style="background-image: url(<%- meme.cover.image.substr(4) === 'http' ? meme.cover.image : `https://cdn.staticaly.com/img/${meme.cover.image}` %>)"></div>
+					<div class="image<%- page.cover.spaced ? ' spaced' : ''%>" style="background-image: url(<%- page.cover.image.substr(4) === 'http' ? page.cover.image : `https://cdn.staticaly.com/img/${page.cover.image}` %>)"></div>
 					<% } %>
 					<div class="overlay<%- !hasCover ? ' show' : ''%>">
-						<span><%- meme.title %></span>
+						<span><%- page.title %></span>
 					</div>
-					<% if(meme.cover.customizable) { %>
+					<% if(page.cover.customizable) { %>
 					<span class="customizable">CUSTOMIZABLE</span>
 					<% } %>
 				</a>
