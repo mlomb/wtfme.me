@@ -12,12 +12,24 @@
 					is open source
 			https://github.com/mlomb/wtfme.me
 -->
+<%
+let display_title = title ? `${title} | wtfme.me` : 'wtfme.me';
+let display_image = module.length && cover.image ? cover.image : 'https://wtfme.me/logo.png';
+%>
 	<meta charset="utf-8">
-	<title><%= title ? `${title} | wtfme.me` : 'wtfme.me' %></title>
+	<title><%= display_title %></title>
 	<meta name="description" content="<%= description %>">
 	<meta name="keywords" content="memes,gifs,wtfmeme,<%= keywords.join(",") %>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<meta name="theme-color" content="#121212">
+	
+	<meta property="og:title" content="<%= display_title %>">
+	<meta property="og:description" content="<%= description %>">
+	<meta property="og:image" content="<%= display_image %>">
+	<meta property="og:url" content="<%= module.length ? `https://wtfme.me/${path}` : 'https://wtfme.me' %>">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="wtfme.me">
+
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="manifest" href="/manifest.json">
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136310149-1"></script>
