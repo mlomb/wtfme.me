@@ -31,11 +31,18 @@
 </head>
 <body>
 	<% if(module.length) { %>
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.2&appId=521992708626982&autoLogAppEvents=1"></script>
+		<script>window.twttr=function(a,c,d){var e=a.getElementsByTagName(c)[0],b=window.twttr||{};if(a.getElementById(d))return b;a=a.createElement(c);a.id=d;a.src="https://platform.twitter.com/widgets.js";e.parentNode.insertBefore(a,e);b._e=[];b.ready=function(a){b._e.push(a)};return b}(document,"script","twitter-wjs");</script>
 		<div id="root"></div>
 		<a href="/" title="wtfme.me"  class="back">
 			<img src="/logo-small.png" alt="wtfme.me logo">
 			<span>Go Back</span>
 		</a>
+		<div class="social">
+			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a><br>
+			<div class="fb-like" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+		</div>
 		<script>window.meme_module = '<%= module %>';</script>
 	<% } else { %>
 		<div class="logo"><a href="https://wtfme.me"><img src="/logo.png" alt="wtfme.me logo"></a></div>
@@ -51,7 +58,7 @@
 					<% } %>
 					<% let hasCover = meme.cover.image && meme.cover.image.length > 0; %>
 					<% if(hasCover) { %>
-					<div class="image<%- meme.cover.spaced ? ' spaced' : ''%>" style="background-image: url(https://cdn.staticaly.com/img/<%- meme.cover.image %>)"></div>
+					<div class="image<%- meme.cover.spaced ? ' spaced' : ''%>" style="background-image: url(<%- meme.cover.image.substr(4) === 'http' ? meme.cover.image : `https://cdn.staticaly.com/img/${meme.cover.image}` %>)"></div>
 					<% } %>
 					<div class="overlay<%- !hasCover ? ' show' : ''%>">
 						<span><%- meme.title %></span>
