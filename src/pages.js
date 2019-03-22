@@ -45,6 +45,16 @@ module.exports = [
             image: "i.imgur.com/12W3qui.jpg"
         }
     },
+	{
+        title: "heyyeyaaeyaaaeyaeyaa",
+        description: "heyyeyaaeyaaaeyaeyaa",
+        keywords: ["heyyeyaaeyaaaeyaeyaa", "he-man"],
+        path: "heyyeyaaeyaaaeyaeyaa",
+        module: "heyyeyaaeyaaaeyaeyaa.js",
+        cover: {
+            image: "media.giphy.com/media/x48I9yoFRlWHC/giphy.gif"
+        }
+	},
     {
         title: "money money money",
         description: "money money money",
