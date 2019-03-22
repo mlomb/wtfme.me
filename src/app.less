@@ -50,18 +50,19 @@ a {
 }
 
 @keyframes rainbow {
-	100%,0%{ color: rgb(255,0,0); }
-	8%  { color: rgb(255,127,0); }
-	16% { color: rgb(255,255,0); }
-	25% { color: rgb(127,255,0); }
-	33% { color: rgb(0,255,0); }
-	41% { color: rgb(0,255,127); }
-	50% { color: rgb(0,255,255); }
-	58% { color: rgb(0,127,255); }
-	66% { color: rgb(0,0,255); }
-	75% { color: rgb(127,0,255); }
-	83% { color: rgb(255,0,255); }
-	91% { color: rgb(255,0,127); }
+	100%,0%
+		{ color: hsl(  0, 100%, 71%); }
+	8%  { color: hsl( 30, 100%, 71%); }
+	16% { color: hsl( 60, 100%, 71%); }
+	25% { color: hsl( 90, 100%, 71%); }
+	33% { color: hsl(120, 100%, 71%); }
+	41% { color: hsl(150, 100%, 71%); }
+	50% { color: hsl(180, 100%, 71%); }
+	58% { color: hsl(210, 100%, 71%); }
+	66% { color: hsl(240, 100%, 71%); }
+	75% { color: hsl(270, 100%, 71%); }
+	83% { color: hsl(300, 100%, 71%); }
+	91% { color: hsl(330, 100%, 71%); }
 }
 .rainbow {
 	animation: rainbow 2.5s linear;
@@ -182,6 +183,10 @@ a {
 	span {
 		vertical-align: middle;
 	    margin-left: 4px;
+	}
+	
+	&:hover span {
+		.rainbow();
 	}
 }
 
