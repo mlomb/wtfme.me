@@ -68,12 +68,25 @@ class DogePet extends Preset {
 		this.last = now;
 
 		let sayings = [
+			"wow",
 			"such time",
 			"wow you late",
 			"so early",
 			"pls pet more",
 			"stop wasting time",
-			"such clock"
+			"such clock",
+			"much numbers",
+			"nice human",
+			"more pat",
+			"good boi",
+			"fluffy boi",
+			"nice doggo",
+			"much soft",
+			"bedtime?",
+			"love u",
+			"very late",
+			"much sunshine",
+			"good nite"
 		];
 		this.say(sayings[Math.floor(Math.random() * sayings.length)]);
 	}
