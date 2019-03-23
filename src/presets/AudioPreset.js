@@ -7,7 +7,7 @@ export default class AudioPreset extends Preset {
             url: undefined,
             autoplay: true,
             loop: false,
-            playonclick: false
+            playonclick: true
         }, options);
 	}
 
@@ -19,7 +19,7 @@ export default class AudioPreset extends Preset {
         root.appendChild(this.audio);
 
         if(this.options.playonclick)
-            root.addEventListener('pointerdown', this.play.bind(this));
+            root.addEventListener('pointerup', this.play.bind(this));
 		if(this.options.autoplay) {
 			let canplay = () => {
 				this.play();
@@ -31,8 +31,28 @@ export default class AudioPreset extends Preset {
     }
 
     play(){
-        this.audio.play().catch((e) => {
-			console.error("Couldn't play audio:", e.message);
-		});
+        let play = () => {
+            this.audio.play().catch((e) => {
+    			console.error("Couldn't play audio:", e.message);
+
+                if(e.name === 'NotAllowedError') {
+                    // wait an interaction
+                    toggleInterationRequired(true);
+                    var firstInteraction = () => {
+                        toggleInterationRequired(false);
+                        this.audio.play().catch((e) => {
+                			console.error("Couldn't play audio, for real:", e.message);
+                        });
+                        window.removeEventListener('pointerup', firstInteraction, false);
+                    };
+                    window.addEventListener('pointerup', firstInteraction, false);
+                }
+    		});
+        };
+        if(this.audio.duration > 0 && !this.audio.paused) {
+            this.audio.pause();
+            this.audio.currentTime = 0;
+        }
+        play();
     }
 }

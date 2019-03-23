@@ -17,9 +17,14 @@ class VibrateRandomly extends Preset {
 	}
 
 	frame(deltaTime) {
-		if(!this.timeout) {
-			if('vibrate' in navigator && navigator.vibrate(0)) { // allowed?
+		if(!this.timeout && 'vibrate' in navigator) {
+			// this will be executed only once
+
+			if(navigator.vibrate(0)) { // allowed?
+				toggleInterationRequired(false);
 				this.vibrate();
+			} else {
+				toggleInterationRequired(true);
 			}
 		}
 	}

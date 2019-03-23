@@ -1,16 +1,23 @@
 const MobileDetect = require('mobile-detect');
 
+window.console.log('%c Want to add a meme? https://github.com/mlomb/wtfme.me', 'background: #222; color: #bada55');
+
 window.mobile_detect = new MobileDetect(window.navigator.userAgent);
 if(window.mobile_detect.is('AndroidOS')) {
 	document.body.classList.add('android');
 }
 
-const context = require.context('./pages', true, /\.(js)$/);
+window.toggleInterationRequired = function(show) {
+	let el = document.getElementsByClassName('interaction-required')[0];
+	if(show)
+		el.classList.add('show');
+	else
+		el.classList.remove('show');
+}
 
+const context = require.context('./pages', true, /\.(js)$/);
 const module = context(`./${window.page_module}`);
 const root = document.getElementById('root');
-
-window.console.log('%c Want to add a meme? https://github.com/mlomb/wtfme.me', 'background: #222; color: #bada55');
 
 if(module.Variants && module.Variants.length > 0) {
 	// round-robin variants

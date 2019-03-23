@@ -250,6 +250,35 @@ a {
 	}
 }
 
+.interaction-required {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	overflow: hidden;
+	
+	.message {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -34px;
+		background: #262626;
+		padding: 5px;
+		border: 2px solid #333333;
+		border-bottom: none;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+		width: 320px;
+		height: 34px;
+		text-align: center;
+		transition: all 0.5s;
+	}
+	
+	&.show .message {
+		bottom: 0;
+	}
+}
+
 .fullscreen-cover, .fullscreen-contain {
 	position: absolute;
 	width: 100%;

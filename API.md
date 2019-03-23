@@ -29,7 +29,7 @@ Play an audio from an URL.
 | `url` | `undefined` | Source of the audio | |
 | `autoplay` | `true` | Start playing the audio when page load |`true`<br>`false`|
 | `loop` | `false` | Loops the audio|`true`<br>`false` |
-| `playonclick` | `false` | If `true` when you click on the page, the audio will be played. | `true`<br>`false`|
+| `playonclick` | `true` | If `true` when you click on the page, the audio will be played again. | `true`<br>`false`|
 #### Example
 ```js
 import AudioPreset from '@presets/AudioPreset';
