@@ -17,7 +17,7 @@ module.exports = [
     },
     {
         title: "Alf",
-        description: "Alf",
+        description: "Alf, who else?",
         keywords: ["meme", "alf"],
         path: "alf",
         module: "alf.js",
@@ -27,7 +27,7 @@ module.exports = [
     },
     {
         title: "Am i awesome?",
-        description: "Am i awesome?",
+        description: "Are you sure you are awesome?",
         keywords: ["question", "am i", "awesome"],
         path: "awesome",
         module: "awesome.js",
@@ -37,7 +37,7 @@ module.exports = [
     },
     {
         title: "Blue",
-        description: "Blue",
+        description: "The blue dude, you know.",
         keywords: ["music", "blue", "eiffel"],
         path: "blue",
         module: "blue.js",
@@ -47,7 +47,7 @@ module.exports = [
     },
     {
         title: "Doge Time",
-        description: "such time. so wow",
+        description: "wanna know the time? doge have you covered. such time. so wow",
         keywords: ["doge", "time", "current time", "dog time"],
         path: "dogetime",
         module: "dogetime.js",
@@ -67,7 +67,7 @@ module.exports = [
     },
 	{
         title: "heyyeyaaeyaaaeyaeyaa",
-        description: "heyyeyaaeyaaaeyaeyaa",
+        description: "heyyeyaaeyaaaeyaeyaa he-man",
         keywords: ["heyyeyaaeyaaaeyaeyaa", "he-man"],
         path: "heyyeyaaeyaaaeyaeyaa",
         module: "heyyeyaaeyaaaeyaeyaa.js",
@@ -77,7 +77,7 @@ module.exports = [
 	},
     {
         title: "Friday",
-        description: "Is it friday?",
+        description: "Is it friday? Is it not?",
         keywords: ["friday", "party", "question"],
         path: "friday",
         module: "friday.js",
@@ -97,7 +97,7 @@ module.exports = [
     },
     {
         title: "noot",
-        description: "noot penguin",
+        description: "NOOT NOOT. noot penguin",
         keywords: ["noot", "penguin", "snow"],
         path: "noot",
         module: "noot.js",
@@ -160,7 +160,7 @@ module.exports = [
     {
         title: "TRIGGERED",
         description: "TRIGGERED AF",
-        keywords: ["trigger", "triggered"],
+        keywords: ["trigger", "triggered", 'vibration'],
         path: "triggered",
         module: "triggered.js",
         cover: {
