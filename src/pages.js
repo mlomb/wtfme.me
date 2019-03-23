@@ -158,6 +158,16 @@ module.exports = [
         }
     },
     {
+        title: "TRIGGERED",
+        description: "TRIGGERED AF",
+        keywords: ["trigger", "triggered"],
+        path: "triggered",
+        module: "triggered.js",
+        cover: {
+            image: "media.giphy.com/media/58FAFC0i31ARqSwHjE/giphy.gif"
+        }
+    },
+    {
         title: "Windows error",
         description: "Windows errors on top of the Windows XP background",
         keywords: ["windows errors", "windows xp", "windows 7"],
