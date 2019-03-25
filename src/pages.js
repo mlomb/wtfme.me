@@ -116,6 +116,16 @@ module.exports = [
         }
     },
     {
+        title: "Mortal Kombat",
+        description: "Mortal Kombat",
+        keywords: ["fatality", "mk", "mortal kombat", "toasty"],
+        path: "mortalkombat",
+        module: "mortalkombat.js",
+        cover: {
+            image: "media.giphy.com/media/g0x9RBf9VIn5u/giphy.gif"
+        }
+    },
+    {
         title: "noot",
         description: "NOOT NOOT. noot penguin",
         keywords: ["noot", "penguin", "snow"],
