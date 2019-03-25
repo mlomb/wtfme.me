@@ -46,6 +46,16 @@ module.exports = [
         }
     },
     {
+        title: "Darth Vader no",
+        description: "Darth Vader saying no",
+        keywords: ["darth vader", "nooo", "star wars", "dark side"],
+        path: "darthvader",
+        module: "darthvader.js",
+        cover: {
+            image: "media.giphy.com/media/LSmULmByAQHQs/giphy.gif"
+        }
+    },
+    {
         title: "Doge Time",
         description: "wanna know the time? doge have you covered. such time. so wow",
         keywords: ["doge", "time", "current time", "dog time"],
