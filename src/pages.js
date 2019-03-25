@@ -56,6 +56,16 @@ module.exports = [
         }
     },
     {
+        title: "Don't touch this",
+        description: "I said, don't touch this",
+        keywords: ["troll", "don't touch"],
+        path: "donttouch",
+        module: "donttouch.js",
+        cover: {
+            image: "media.giphy.com/media/nR4L10XlJcSeQ/giphy.gif"
+        }
+    },
+    {
         title: "Enano asador",
         description: "Enano asador bostero",
         keywords: ["asado", "boca", "enano"],
