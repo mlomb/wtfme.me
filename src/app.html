@@ -60,6 +60,7 @@ let display_title = title ? `${title} | wtfme.me` : 'wtfme.me';
 		<div class="social">
 			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a><br>
 			<div class="fb-like" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+			<div style="font-size: 13px;margin: 4px;"><span id="visits">...</span> visits</div>
 		</div>
 		<% } %>
 		<div class="interaction-required">
@@ -94,9 +95,21 @@ let display_title = title ? `${title} | wtfme.me` : 'wtfme.me';
 		</div>
 		<div class="footer">
 			<div class="container">
-				<a href="https://github.com/mlomb/wtfme.me" target="_blank">view on <span class="github"></span></a><span class="separator">·</span><span><%= new Date().getFullYear() %></span>
+				<a href="https://github.com/mlomb/wtfme.me" target="_blank">view on <span class="github"></span></a><span class="separator">·</span><span><%= new Date().getFullYear() %></span><span class="separator">·</span><span id="visits">...</span> visits
 			</div>
 		</div>
 	<% } %>
+	<script>
+	var req = new XMLHttpRequest();
+	req.open("GET", "https://api.countapi.xyz/hit/wtfme.me/<%= module.length ? module : 'index' %>");
+	req.responseType = 'json';
+	req.onload  = function() {
+		if(this.status == 200) {
+			var el = document.getElementById("visits");
+			if(el) el.innerText = this.response.value.toLocaleString();
+		}
+	}
+	req.send();
+	</script>
 </body>
 </html>
