@@ -95,11 +95,24 @@ let display_title = title ? `${title} | wtfme.me` : 'wtfme.me';
 		</div>
 		<div class="footer">
 			<div class="container">
-				<a href="https://github.com/mlomb/wtfme.me" target="_blank">view on <span class="github"></span></a><span class="separator">·</span><span><%= new Date().getFullYear() %></span><span class="separator">·</span><span id="visits">...</span> visits
+				<a href="https://github.com/mlomb/wtfme.me" target="_blank">view on <span class="github"></span></a><span class="separator">·</span><span><%= new Date().getFullYear() %></span><span class="separator">·</span><span id="visits-all">...</span> visits
 			</div>
 		</div>
 	<% } %>
 	<script>
+	// All pages
+	var req = new XMLHttpRequest();
+	req.open("GET", "https://api.countapi.xyz/hit/wtfme.me/all");
+	req.responseType = 'json';
+	req.onload  = function() {
+		if(this.status == 200) {
+			var el = document.getElementById("visits-all");
+			if(el) el.innerText = this.response.value.toLocaleString();
+		}
+	}
+	req.send();
+	
+	// Per page
 	var req = new XMLHttpRequest();
 	req.open("GET", "https://api.countapi.xyz/hit/wtfme.me/<%= module.length ? module : 'index' %>");
 	req.responseType = 'json';
