@@ -100,29 +100,20 @@ let display_title = title ? `${title} | wtfme.me` : 'wtfme.me';
 		</div>
 	<% } %>
 	<script>
-	// All pages
-	var req = new XMLHttpRequest();
-	req.open("GET", "https://api.countapi.xyz/hit/wtfme.me/all");
-	req.responseType = 'json';
-	req.onload  = function() {
-		if(this.status == 200) {
+	function cb_all(response) {
+		if(response.code == 200) {
 			var el = document.getElementById("visits-all");
-			if(el) el.innerText = this.response.value.toLocaleString();
+			if(el) el.innerText = response.value.toLocaleString();
 		}
 	}
-	req.send();
-	
-	// Per page
-	var req = new XMLHttpRequest();
-	req.open("GET", "https://api.countapi.xyz/hit/wtfme.me/<%= module.length ? module : 'index' %>");
-	req.responseType = 'json';
-	req.onload  = function() {
-		if(this.status == 200) {
+	function cb_current(response) {
+		if(response.code == 200) {
 			var el = document.getElementById("visits");
-			if(el) el.innerText = this.response.value.toLocaleString();
+			if(el) el.innerText = response.value.toLocaleString();
 		}
 	}
-	req.send();
 	</script>
+	<script src="https://api.countapi.xyz/hit/wtfme.me/all?callback=cb_all"></script>
+	<script src="https://api.countapi.xyz/hit/wtfme.me/<%= module.length ? module : 'index' %>?callback=cb_current"></script>
 </body>
 </html>
