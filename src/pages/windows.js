@@ -3,14 +3,14 @@ import CanvasPreset from '@presets/CanvasPreset.js';
 class WindowsError extends CanvasPreset {
     constructor(url){
         super();
-        this.url = `https://cdn.staticaly.com/img/${url}`;
+        this.url = `//${url}`;
         this.backgrounds = ['wjbADbb', 'lojmr', 'FyCO6pw'];
     }
 
     init(root){
 		var bg = document.createElement('div');
 		bg.classList.add("fullscreen-cover");
-		bg.style.backgroundImage = 'url(https://cdn.staticaly.com/img/i.imgur.com/' + this.backgrounds[Math.floor(Math.random() * this.backgrounds.length)] + '.jpg)';
+		bg.style.backgroundImage = 'url(//i.imgur.com/' + this.backgrounds[Math.floor(Math.random() * this.backgrounds.length)] + '.jpg)';
 
         super.init(bg);
 		root.prepend(bg);

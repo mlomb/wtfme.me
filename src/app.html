@@ -81,7 +81,7 @@ let display_title = title ? `${title} | wtfme.me` : 'wtfme.me';
 					<% } %>
 					<% let hasCover = page.cover.image && page.cover.image.length > 0; %>
 					<% if(hasCover) { %>
-					<div class="image<%- page.cover.spaced ? ' spaced' : ''%>" style="background-image: url(<%- page.cover.image.substr(4) === 'http' ? page.cover.image : `https://cdn.staticaly.com/img/${page.cover.image}` %>)"></div>
+					<div class="image<%- page.cover.spaced ? ' spaced' : ''%>" style="background-image: url(<%- page.cover.image.substr(4) === 'http' ? page.cover.image : `//${page.cover.image}` %>)"></div>
 					<% } %>
 					<div class="overlay<%- !hasCover ? ' show' : ''%>">
 						<span><%- page.title %></span>

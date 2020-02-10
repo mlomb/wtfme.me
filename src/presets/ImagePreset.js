@@ -3,7 +3,7 @@ import BackgroundPreset from './BackgroundPreset';
 export default class ImagePreset extends BackgroundPreset {
 	constructor(url) {
 		super({
-			url: `https://cdn.staticaly.com/img/${url}`
+			url: `//${url}`
 		});
 	}
 }
