@@ -4,6 +4,9 @@
 	<a href="https://app.netlify.com/sites/wtfmeme/deploys"><img src="https://api.netlify.com/api/v1/badges/267515db-4262-42d2-ab48-2d0b785379d5/deploy-status" alt="Netlify Status"></a>
 </p>
 
+    ⚠️ This project is no longer mantained. 
+You still can access the archived URL here: [wtfmeme.mlomb.me](https://wtfmeme.mlomb.me). Former [wtfme.me](https://wtfme.me).
+
 ## Contributing
 wtfme.me is a community project. We invite you to add your random meme ideas. Even if you don't know how to code, you can throw ideas in the issues page.
 
